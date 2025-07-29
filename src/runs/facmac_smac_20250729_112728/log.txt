@@ -1,0 +1,132 @@
+[INFO] Logging to: src/runs/facmac_smac_20250729_112728/log.txt
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+{'entity_shape': 58, 'n_actions': 12, 'n_agents': 8, 'n_entities': 16, 'episode_limit': 150, 'n_tasks': 8, 'state_shape': 608, 'obs_shape': 76}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+===================================================================================
+pop: [<controllers.EA_basic_controller.Gen_BasicMAC object at 0x7acd24b14550>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7acd247d5eb0>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7acd247ed670>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7acd247eda60>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7acd247ede50>]
+===================================================================================
+/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/optim/adam.py:48: UserWarning: optimizer contains a parameter group with duplicate parameters; in future, this will cause an error; see github.com/pytorch/pytorch/issues/40967 for more information
+  super(Adam, self).__init__(params, defaults)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+RL eval  -33.70403284814016 0.0
+EA eval  -30.650289661291954 0.0
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 438, in run_sequential
+    learner.train(episode_sample, all_teams, runner.t_env, episode)
+  File "/data/gu-di/RACE/src/learners/EA_facmac_learner_discrete.py", line 429, in train
+    total_loss.backward()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/_tensor.py", line 255, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/autograd/__init__.py", line 147, in backward
+    Variable._execution_engine.run_backward(
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+BrokenPipeError: [Errno 32] Broken pipe
+Call stack:
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 248, in __call__
+    self._stop_heartbeat()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 284, in _stop_heartbeat
+    self.run_logger.debug("Stopping Heartbeat")
+Message: 'Stopping Heartbeat'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 438, in run_sequential
+    learner.train(episode_sample, all_teams, runner.t_env, episode)
+  File "/data/gu-di/RACE/src/learners/EA_facmac_learner_discrete.py", line 429, in train
+    total_loss.backward()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/_tensor.py", line 255, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/autograd/__init__.py", line 147, in backward
+    Variable._execution_engine.run_backward(
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+BrokenPipeError: [Errno 32] Broken pipe
+Call stack:
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 250, in __call__
+    self._emit_interrupted(status)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 380, in _emit_interrupted
+    self.run_logger.warning("Aborted after %s!", elapsed_time)
+Message: 'Aborted after %s!'
+Arguments: (datetime.timedelta(seconds=72),)
+Traceback (most recent call last):
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 438, in run_sequential
+    learner.train(episode_sample, all_teams, runner.t_env, episode)
+  File "/data/gu-di/RACE/src/learners/EA_facmac_learner_discrete.py", line 429, in train
+    total_loss.backward()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/_tensor.py", line 255, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/autograd/__init__.py", line 147, in backward
+    Variable._execution_engine.run_backward(
+KeyboardInterrupt
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/wandb_manager.py", line 151, in _teardown
+    result = self._service.join()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/service/service.py", line 136, in join
+    ret = self._internal_proc.wait()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/subprocess.py", line 1083, in wait
+    return self._wait(timeout=timeout)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/subprocess.py", line 1822, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/subprocess.py", line 1780, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt

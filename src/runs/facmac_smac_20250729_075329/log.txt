@@ -2619,67 +2619,289 @@ EA evolution end.
 Sync from RL --> Nevo
 EA evolution start ...
 EA evolution end.
-test_episode_limit_mean:   0.2437	test_fires_extinguished_mean:  2.6875	test_prop_buildings_completed_mean:  0.1828	test_return_mean:        -25.0851
-test_return_std:          13.4658	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.7562	test_types_per_build_mean:  0.9232
-test_types_per_firefight_mean:  0.8625	types_per_build_mean:      0.9122	types_per_firefight_mean:  0.8478	
-[INFO 08:34:15] my_main t_env: 102690 / 15000000
-[INFO 08:34:15] my_main Estimated time left: 4 days, 7 hours, 31 minutes, 44 seconds. Time passed: 40 minutes, 43 seconds
-[INFO 08:34:36] my_main Recent Stats | t_env:     103182 | Episode:      299
-buildings_burned_mean:     3.5492	buildings_completed_mean:  0.9825	buildings_health_delta_mean: -1.2738	critic_grad_norm:          9.2325
-critic_loss:               1.3079	ep_length_mean:           90.9773	episode_limit_mean:        0.1764	epsilon:                   0.0500
-fires_extinguished_mean:   2.0146	prop_buildings_completed_mean:  0.2229	return_mean:             -23.9919	return_std:               14.2803
-solved_mean:               0.0080	target_mean:              -0.8290	tasks_changed_mean:        0.8690	td_error_abs:              0.7903
-test_buildings_burned_mean:  3.7125	test_buildings_completed_mean:  1.1313	test_buildings_health_delta_mean: -1.2593	test_ep_length_mean:      89.3125
-test_episode_limit_mean:   0.1437	test_fires_extinguished_mean:  1.9187	test_prop_buildings_completed_mean:  0.2222	test_return_mean:        -24.8537
-test_return_std:          13.0084	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.8562	test_types_per_build_mean:  0.9980
-test_types_per_firefight_mean:  0.9093	types_per_build_mean:      0.9408	types_per_firefight_mean:  0.8569	
-[INFO 08:35:28] my_main Recent Stats | t_env:     105263 | Episode:      303
-buildings_burned_mean:     3.5160	buildings_completed_mean:  1.0967	buildings_health_delta_mean: -1.1976	critic_grad_norm:          8.2984
-critic_loss:               1.3411	ep_length_mean:           90.1358	episode_limit_mean:        0.1662	epsilon:                   0.0500
-fires_extinguished_mean:   1.8980	prop_buildings_completed_mean:  0.2460	return_mean:             -23.5561	return_std:               14.4870
-solved_mean:               0.0080	target_mean:              -0.8422	tasks_changed_mean:        0.8702	td_error_abs:              0.7919
-test_buildings_burned_mean:  3.7125	test_buildings_completed_mean:  1.1313	test_buildings_health_delta_mean: -1.2593	test_ep_length_mean:      89.3125
-test_episode_limit_mean:   0.1437	test_fires_extinguished_mean:  1.9187	test_prop_buildings_completed_mean:  0.2222	test_return_mean:        -24.8537
-test_return_std:          13.0084	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.8562	test_types_per_build_mean:  0.9980
-test_types_per_firefight_mean:  0.9093	types_per_build_mean:      1.0021	types_per_firefight_mean:  0.8810	
-[INFO 08:36:08] my_main Updated all target networks
-[INFO 08:36:21] my_main Recent Stats | t_env:     107342 | Episode:      307
-buildings_burned_mean:     3.5635	buildings_completed_mean:  1.2311	buildings_health_delta_mean: -1.1641	critic_grad_norm:         17.3287
-critic_loss:               1.3696	ep_length_mean:           88.9855	episode_limit_mean:        0.1381	epsilon:                   0.0500
-fires_extinguished_mean:   2.1306	prop_buildings_completed_mean:  0.2694	return_mean:             -23.5650	return_std:               14.8774
-solved_mean:               0.0247	target_mean:              -0.8697	tasks_changed_mean:        0.8879	td_error_abs:              0.7928
-test_buildings_burned_mean:  3.7125	test_buildings_completed_mean:  1.1313	test_buildings_health_delta_mean: -1.2593	test_ep_length_mean:      89.3125
-test_episode_limit_mean:   0.1437	test_fires_extinguished_mean:  1.9187	test_prop_buildings_completed_mean:  0.2222	test_return_mean:        -24.8537
-test_return_std:          13.0084	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.8562	test_types_per_build_mean:  0.9980
-test_types_per_firefight_mean:  0.9093	types_per_build_mean:      1.0485	types_per_firefight_mean:  0.8946	
-[INFO 08:37:14] my_main Recent Stats | t_env:     109396 | Episode:      311
-buildings_burned_mean:     3.5361	buildings_completed_mean:  1.2558	buildings_health_delta_mean: -1.1471	critic_grad_norm:         16.5585
-critic_loss:               1.4278	ep_length_mean:           90.0718	episode_limit_mean:        0.1204	epsilon:                   0.0500
-fires_extinguished_mean:   2.3543	prop_buildings_completed_mean:  0.2667	return_mean:             -23.3121	return_std:               14.2509
-solved_mean:               0.0250	target_mean:              -0.9152	tasks_changed_mean:        0.8796	td_error_abs:              0.8061
-test_buildings_burned_mean:  3.7125	test_buildings_completed_mean:  1.1313	test_buildings_health_delta_mean: -1.2593	test_ep_length_mean:      89.3125
-test_episode_limit_mean:   0.1437	test_fires_extinguished_mean:  1.9187	test_prop_buildings_completed_mean:  0.2222	test_return_mean:        -24.8537
-test_return_std:          13.0084	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.8562	test_types_per_build_mean:  0.9980
-test_types_per_firefight_mean:  0.9093	types_per_build_mean:      1.0443	types_per_firefight_mean:  0.8875	
-[INFO 08:38:07] my_main Recent Stats | t_env:     111890 | Episode:      315
-buildings_burned_mean:     3.7289	buildings_completed_mean:  1.2573	buildings_health_delta_mean: -1.2292	critic_grad_norm:         16.1374
-critic_loss:               1.4483	ep_length_mean:           91.2240	episode_limit_mean:        0.1302	epsilon:                   0.0500
-fires_extinguished_mean:   2.4412	prop_buildings_completed_mean:  0.2506	return_mean:             -24.6742	return_std:               14.3556
-solved_mean:               0.0250	target_mean:              -0.9119	tasks_changed_mean:        0.8698	td_error_abs:              0.8090
-test_buildings_burned_mean:  3.7125	test_buildings_completed_mean:  1.1313	test_buildings_health_delta_mean: -1.2593	test_ep_length_mean:      89.3125
-test_episode_limit_mean:   0.1437	test_fires_extinguished_mean:  1.9187	test_prop_buildings_completed_mean:  0.2222	test_return_mean:        -24.8537
-test_return_std:          13.0084	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.8562	test_types_per_build_mean:  0.9980
-test_types_per_firefight_mean:  0.9093	types_per_build_mean:      1.0291	types_per_firefight_mean:  0.8968	
-[INFO 08:38:33] my_main t_env: 112992 / 15000000
-[INFO 08:38:33] my_main Estimated time left: 4 days, 7 hours, 51 minutes, 56 seconds. Time passed: 45 minutes, 2 seconds
-[INFO 08:39:09] my_main Recent Stats | t_env:     114419 | Episode:      319
-buildings_burned_mean:     3.6815	buildings_completed_mean:  1.3767	buildings_health_delta_mean: -1.1510	critic_grad_norm:         16.4837
-critic_loss:               1.4997	ep_length_mean:           90.8119	episode_limit_mean:        0.1075	epsilon:                   0.0500
-fires_extinguished_mean:   2.5638	prop_buildings_completed_mean:  0.2691	return_mean:             -24.1122	return_std:               13.2485
-solved_mean:               0.0250	target_mean:              -0.9549	tasks_changed_mean:        0.8925	td_error_abs:              0.8398
-test_buildings_burned_mean:  3.7500	test_buildings_completed_mean:  1.2437	test_buildings_health_delta_mean: -1.2411	test_ep_length_mean:      90.6437
-test_episode_limit_mean:   0.1375	test_fires_extinguished_mean:  2.0063	test_prop_buildings_completed_mean:  0.2580	test_return_mean:        -24.9379
-test_return_std:          14.2472	test_solved_mean:          0.0187	test_tasks_changed_mean:   0.8625	test_types_per_build_mean:  0.9588
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+RL eval  -19.42230021777397 0.0
+EA eval  -24.355858664838536 0.0
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+RL eval  -21.334640597098616 0.0
+EA eval  -21.439454283641883 0.0
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+RL eval  -20.236782282230426 0.0
+EA eval  -24.45175939571919 0.0
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+RL eval  -21.892619016803152 0.0
+EA eval  -22.300608620963263 0.0
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+RL eval  -24.449539455069534 0.0
+EA eval  -25.237841278591976 0.0
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Traceback (most recent call last):
+  File "src/main.py", line 168, in <module>
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 80, in my_main
+    # run the framework
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 438, in run_sequential
+    learner.train(episode_sample, all_teams, runner.t_env, episode)
+  File "/data/gu-di/RACE/src/learners/EA_facmac_learner_discrete.py", line 346, in train
+    act_outs = self.mac.select_actions(batch, t_ep=t, t_env=t_env, test_mode=False, explore=False)
+  File "/data/gu-di/RACE/src/controllers/EA_basic_controller.py", line 24, in select_actions
+    chosen_actions = self.action_selector.select_action(agent_outputs[bs], avail_actions[bs], t_env,
+  File "/data/gu-di/RACE/src/components/action_selectors.py", line 83, in select_action
+    picked_actions = GumbelSoftmax(logits=masked_policies).gumbel_softmax_sample()
+  File "/data/gu-di/RACE/src/components/action_selectors.py", line 24, in gumbel_softmax_sample
+    return th.softmax( y / self.temperature, dim=-1)
+KeyboardInterrupt
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/wandb_manager.py", line 151, in _teardown
+    result = self._service.join()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/service/service.py", line 136, in join
+    ret = self._internal_proc.wait()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/subprocess.py", line 1083, in wait
+    return self._wait(timeout=timeout)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/subprocess.py", line 1822, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/subprocess.py", line 1780, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
+  0.9588
 test_types_per_firefight_mean:  0.8605	types_per_build_mean:      1.0158	types_per_firefight_mean:  0.8987	
 [INFO 08:40:02] my_main Recent Stats | t_env:     116459 | Episode:      323
 buildings_burned_mean:     3.7300	buildings_completed_mean:  1.3635	buildings_health_delta_mean: -1.1771	critic_grad_norm:         16.3815
@@ -4220,3 +4442,112 @@ test_buildings_burned_mean:  3.5125	test_buildings_completed_mean:  1.3313	test_
 test_episode_limit_mean:   0.1812	test_fires_extinguished_mean:  2.2000	test_prop_buildings_completed_mean:  0.2704	test_return_mean:        -22.9668
 test_return_std:          13.7805	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.8187	test_types_per_build_mean:  1.0085
 test_types_per_firefight_mean:  0.8907	types_per_build_mean:      1.0178	types_per_firefight_mean:  0.9148	
+[INFO 11:13:49] my_main Recent Stats | t_env:     479042 | Episode:      995
+buildings_burned_mean:     3.6702	buildings_completed_mean:  1.3843	buildings_health_delta_mean: -1.1251	critic_grad_norm:         20.5180
+critic_loss:               0.9998	ep_length_mean:           94.3449	episode_limit_mean:        0.2265	epsilon:                   0.0500
+fires_extinguished_mean:   2.5944	prop_buildings_completed_mean:  0.2801	return_mean:             -23.9884	return_std:               14.4507
+solved_mean:               0.0206	target_mean:              -1.0701	tasks_changed_mean:        0.7735	td_error_abs:              0.6874
+test_buildings_burned_mean:  3.5125	test_buildings_completed_mean:  1.3313	test_buildings_health_delta_mean: -1.0519	test_ep_length_mean:      91.7062
+test_episode_limit_mean:   0.1812	test_fires_extinguished_mean:  2.2000	test_prop_buildings_completed_mean:  0.2704	test_return_mean:        -22.9668
+test_return_std:          13.7805	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.8187	test_types_per_build_mean:  1.0085
+test_types_per_firefight_mean:  0.8907	types_per_build_mean:      1.0677	types_per_firefight_mean:  0.9069	
+[INFO 11:14:42] my_main Recent Stats | t_env:     481125 | Episode:      999
+buildings_burned_mean:     3.7029	buildings_completed_mean:  1.3665	buildings_health_delta_mean: -1.1201	critic_grad_norm:         19.5782
+critic_loss:               1.0356	ep_length_mean:           96.1515	episode_limit_mean:        0.2298	epsilon:                   0.0500
+fires_extinguished_mean:   2.8101	prop_buildings_completed_mean:  0.2794	return_mean:             -24.0836	return_std:               15.2498
+solved_mean:               0.0302	target_mean:              -1.1186	tasks_changed_mean:        0.7702	td_error_abs:              0.6928
+test_buildings_burned_mean:  3.5125	test_buildings_completed_mean:  1.3313	test_buildings_health_delta_mean: -1.0519	test_ep_length_mean:      91.7062
+test_episode_limit_mean:   0.1812	test_fires_extinguished_mean:  2.2000	test_prop_buildings_completed_mean:  0.2704	test_return_mean:        -22.9668
+test_return_std:          13.7805	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.8187	test_types_per_build_mean:  1.0085
+test_types_per_firefight_mean:  0.8907	types_per_build_mean:      1.0853	types_per_firefight_mean:  0.9190	
+[INFO 11:15:08] my_main t_env: 482300 / 15000000
+[INFO 11:15:08] my_main Estimated time left: 4 days, 2 hours, 32 minutes, 35 seconds. Time passed: 3 hours, 21 minutes, 37 seconds
+[INFO 11:15:45] my_main Recent Stats | t_env:     483580 | Episode:     1003
+buildings_burned_mean:     3.7029	buildings_completed_mean:  1.4141	buildings_health_delta_mean: -1.1360	critic_grad_norm:         16.0643
+critic_loss:               1.1550	ep_length_mean:           95.9134	episode_limit_mean:        0.2108	epsilon:                   0.0500
+fires_extinguished_mean:   2.6482	prop_buildings_completed_mean:  0.2854	return_mean:             -24.1961	return_std:               15.1536
+solved_mean:               0.0206	target_mean:              -1.1024	tasks_changed_mean:        0.7892	td_error_abs:              0.7427
+test_buildings_burned_mean:  3.2625	test_buildings_completed_mean:  1.2937	test_buildings_health_delta_mean: -0.9806	test_ep_length_mean:      94.3250
+test_episode_limit_mean:   0.2062	test_fires_extinguished_mean:  2.3625	test_prop_buildings_completed_mean:  0.2710	test_return_mean:        -21.2739
+test_return_std:          12.1704	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.7937	test_types_per_build_mean:  0.9614
+test_types_per_firefight_mean:  0.8709	types_per_build_mean:      1.1087	types_per_firefight_mean:  0.9052	
+[INFO 11:16:25] my_main Updated all target networks
+[INFO 11:16:38] my_main Recent Stats | t_env:     485625 | Episode:     1007
+buildings_burned_mean:     3.8195	buildings_completed_mean:  1.3147	buildings_health_delta_mean: -1.2387	critic_grad_norm:         20.0070
+critic_loss:               1.1666	ep_length_mean:           99.4010	episode_limit_mean:        0.2169	epsilon:                   0.0500
+fires_extinguished_mean:   2.5583	prop_buildings_completed_mean:  0.2656	return_mean:             -25.2265	return_std:               15.7147
+solved_mean:               0.0206	target_mean:              -1.1087	tasks_changed_mean:        0.7831	td_error_abs:              0.7432
+test_buildings_burned_mean:  3.2625	test_buildings_completed_mean:  1.2937	test_buildings_health_delta_mean: -0.9806	test_ep_length_mean:      94.3250
+test_episode_limit_mean:   0.2062	test_fires_extinguished_mean:  2.3625	test_prop_buildings_completed_mean:  0.2710	test_return_mean:        -21.2739
+test_return_std:          12.1704	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.7937	test_types_per_build_mean:  0.9614
+test_types_per_firefight_mean:  0.8709	types_per_build_mean:      1.0938	types_per_firefight_mean:  0.8929	
+[INFO 11:17:31] my_main Recent Stats | t_env:     487908 | Episode:     1011
+buildings_burned_mean:     3.5626	buildings_completed_mean:  1.4350	buildings_health_delta_mean: -0.9909	critic_grad_norm:         19.9459
+critic_loss:               1.2156	ep_length_mean:           94.5741	episode_limit_mean:        0.1731	epsilon:                   0.0500
+fires_extinguished_mean:   2.5101	prop_buildings_completed_mean:  0.2958	return_mean:             -22.9767	return_std:               14.4286
+solved_mean:               0.0175	target_mean:              -1.1162	tasks_changed_mean:        0.8269	td_error_abs:              0.7509
+test_buildings_burned_mean:  3.2625	test_buildings_completed_mean:  1.2937	test_buildings_health_delta_mean: -0.9806	test_ep_length_mean:      94.3250
+test_episode_limit_mean:   0.2062	test_fires_extinguished_mean:  2.3625	test_prop_buildings_completed_mean:  0.2710	test_return_mean:        -21.2739
+test_return_std:          12.1704	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.7937	test_types_per_build_mean:  0.9614
+test_types_per_firefight_mean:  0.8709	types_per_build_mean:      1.1085	types_per_firefight_mean:  0.9354	
+[INFO 11:18:24] my_main Recent Stats | t_env:     490038 | Episode:     1015
+buildings_burned_mean:     3.7531	buildings_completed_mean:  1.3778	buildings_health_delta_mean: -1.1138	critic_grad_norm:         18.0753
+critic_loss:               1.2353	ep_length_mean:           94.1836	episode_limit_mean:        0.1541	epsilon:                   0.0500
+fires_extinguished_mean:   2.3577	prop_buildings_completed_mean:  0.2810	return_mean:             -24.5538	return_std:               14.5170
+solved_mean:               0.0080	target_mean:              -1.1320	tasks_changed_mean:        0.8459	td_error_abs:              0.7596
+test_buildings_burned_mean:  3.2625	test_buildings_completed_mean:  1.2937	test_buildings_health_delta_mean: -0.9806	test_ep_length_mean:      94.3250
+test_episode_limit_mean:   0.2062	test_fires_extinguished_mean:  2.3625	test_prop_buildings_completed_mean:  0.2710	test_return_mean:        -21.2739
+test_return_std:          12.1704	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.7937	test_types_per_build_mean:  0.9614
+test_types_per_firefight_mean:  0.8709	types_per_build_mean:      1.1013	types_per_firefight_mean:  0.9311	
+[INFO 11:19:18] my_main t_env: 492308 / 15000000
+[INFO 11:19:18] my_main Estimated time left: 4 days, 4 hours, 34 minutes, 33 seconds. Time passed: 3 hours, 25 minutes, 47 seconds
+[INFO 11:19:26] my_main Recent Stats | t_env:     492308 | Episode:     1019
+buildings_burned_mean:     3.7414	buildings_completed_mean:  1.3172	buildings_health_delta_mean: -1.1069	critic_grad_norm:         18.4537
+critic_loss:               1.1987	ep_length_mean:           92.7741	episode_limit_mean:        0.1619	epsilon:                   0.0500
+fires_extinguished_mean:   2.3659	prop_buildings_completed_mean:  0.2727	return_mean:             -24.4815	return_std:               14.1902
+solved_mean:               0.0080	target_mean:              -1.1632	tasks_changed_mean:        0.8381	td_error_abs:              0.7551
+test_buildings_burned_mean:  3.2250	test_buildings_completed_mean:  1.3750	test_buildings_health_delta_mean: -0.8866	test_ep_length_mean:      90.2938
+test_episode_limit_mean:   0.1750	test_fires_extinguished_mean:  2.5688	test_prop_buildings_completed_mean:  0.2932	test_return_mean:        -20.7593
+test_return_std:          12.7009	test_solved_mean:          0.0063	test_tasks_changed_mean:   0.8250	test_types_per_build_mean:  0.9585
+test_types_per_firefight_mean:  0.8802	types_per_build_mean:      1.0948	types_per_firefight_mean:  0.9146	
+[INFO 11:20:20] my_main Recent Stats | t_env:     494642 | Episode:     1023
+buildings_burned_mean:     3.6045	buildings_completed_mean:  1.3720	buildings_health_delta_mean: -1.0214	critic_grad_norm:         18.1280
+critic_loss:               1.1496	ep_length_mean:           89.9848	episode_limit_mean:        0.1488	epsilon:                   0.0500
+fires_extinguished_mean:   2.3278	prop_buildings_completed_mean:  0.2958	return_mean:             -23.3161	return_std:               14.4056
+solved_mean:               0.0247	target_mean:              -1.1565	tasks_changed_mean:        0.8512	td_error_abs:              0.7319
+test_buildings_burned_mean:  3.2250	test_buildings_completed_mean:  1.3750	test_buildings_health_delta_mean: -0.8866	test_ep_length_mean:      90.2938
+test_episode_limit_mean:   0.1750	test_fires_extinguished_mean:  2.5688	test_prop_buildings_completed_mean:  0.2932	test_return_mean:        -20.7593
+test_return_std:          12.7009	test_solved_mean:          0.0063	test_tasks_changed_mean:   0.8250	test_types_per_build_mean:  0.9585
+test_types_per_firefight_mean:  0.8802	types_per_build_mean:      1.0928	types_per_firefight_mean:  0.8874	
+[INFO 11:21:14] my_main Recent Stats | t_env:     496926 | Episode:     1027
+buildings_burned_mean:     3.5502	buildings_completed_mean:  1.2549	buildings_health_delta_mean: -1.0591	critic_grad_norm:         19.6391
+critic_loss:               1.1644	ep_length_mean:           94.4589	episode_limit_mean:        0.1799	epsilon:                   0.0500
+fires_extinguished_mean:   2.5611	prop_buildings_completed_mean:  0.2813	return_mean:             -23.1546	return_std:               14.9623
+solved_mean:               0.0167	target_mean:              -1.1713	tasks_changed_mean:        0.8201	td_error_abs:              0.7496
+test_buildings_burned_mean:  3.2250	test_buildings_completed_mean:  1.3750	test_buildings_health_delta_mean: -0.8866	test_ep_length_mean:      90.2938
+test_episode_limit_mean:   0.1750	test_fires_extinguished_mean:  2.5688	test_prop_buildings_completed_mean:  0.2932	test_return_mean:        -20.7593
+test_return_std:          12.7009	test_solved_mean:          0.0063	test_tasks_changed_mean:   0.8250	test_types_per_build_mean:  0.9585
+test_types_per_firefight_mean:  0.8802	types_per_build_mean:      1.0171	types_per_firefight_mean:  0.8733	
+[INFO 11:22:07] my_main Recent Stats | t_env:     498959 | Episode:     1031
+buildings_burned_mean:     3.5296	buildings_completed_mean:  1.2775	buildings_health_delta_mean: -1.0532	critic_grad_norm:         18.5739
+critic_loss:               1.1662	ep_length_mean:           93.5514	episode_limit_mean:        0.1610	epsilon:                   0.0500
+fires_extinguished_mean:   2.4046	prop_buildings_completed_mean:  0.2811	return_mean:             -22.9818	return_std:               15.1067
+solved_mean:               0.0254	target_mean:              -1.1138	tasks_changed_mean:        0.8390	td_error_abs:              0.7548
+test_buildings_burned_mean:  3.2250	test_buildings_completed_mean:  1.3750	test_buildings_health_delta_mean: -0.8866	test_ep_length_mean:      90.2938
+test_episode_limit_mean:   0.1750	test_fires_extinguished_mean:  2.5688	test_prop_buildings_completed_mean:  0.2932	test_return_mean:        -20.7593
+test_return_std:          12.7009	test_solved_mean:          0.0063	test_tasks_changed_mean:   0.8250	test_types_per_build_mean:  0.9585
+test_types_per_firefight_mean:  0.8802	types_per_build_mean:      0.9836	types_per_firefight_mean:  0.8905	
+[INFO 11:23:01] my_main Recent Stats | t_env:     501344 | Episode:     1035
+buildings_burned_mean:     3.2721	buildings_completed_mean:  1.3757	buildings_health_delta_mean: -0.8793	critic_grad_norm:         20.5225
+critic_loss:               1.1171	ep_length_mean:           92.9202	episode_limit_mean:        0.1601	epsilon:                   0.0500
+fires_extinguished_mean:   2.3306	prop_buildings_completed_mean:  0.3077	return_mean:             -20.8837	return_std:               14.6735
+solved_mean:               0.0345	target_mean:              -1.0494	tasks_changed_mean:        0.8399	td_error_abs:              0.7281
+test_buildings_burned_mean:  3.2250	test_buildings_completed_mean:  1.3750	test_buildings_health_delta_mean: -0.8866	test_ep_length_mean:      90.2938
+test_episode_limit_mean:   0.1750	test_fires_extinguished_mean:  2.5688	test_prop_buildings_completed_mean:  0.2932	test_return_mean:        -20.7593
+test_return_std:          12.7009	test_solved_mean:          0.0063	test_tasks_changed_mean:   0.8250	test_types_per_build_mean:  0.9585
+test_types_per_firefight_mean:  0.8802	types_per_build_mean:      0.9729	types_per_firefight_mean:  0.8706	
+[INFO 11:23:28] my_main t_env: 502384 / 15000000
+[INFO 11:23:28] my_main Estimated time left: 4 days, 3 hours, 49 minutes, 6 seconds. Time passed: 3 hours, 29 minutes, 56 seconds
+[INFO 11:24:09] my_main Updated all target networks
+[DEBUG 11:24:09] pymarl Stopping Heartbeat
+[WARNING 11:24:10] pymarl Aborted after 3:30:41!

@@ -1,0 +1,201 @@
+src/main.py:118: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  if isinstance(v, collections.Mapping):
+[INFO 11:31:53] root Saving to FileStorageObserver in results/sacred.
+[DEBUG 11:31:53] pymarl Using capture mode "no"
+[INFO 11:31:53] pymarl Running command 'my_main'
+[INFO 11:31:53] pymarl Started run with ID "164"
+[DEBUG 11:31:53] pymarl Starting Heartbeat
+[DEBUG 11:31:53] my_main Started
+[INFO 11:31:53] my_main Experiment Parameters:
+[INFO 11:31:53] my_main 
+
+{   'EA': 1,
+    'EA_alpha': 1.0,
+    'EA_freq': 1,
+    'N_type': 1,
+    'Org_alpha': 1.0,
+    'SAME': 0,
+    'act_noise': 0.1,
+    'action_range': None,
+    'action_selector': 'gumbel',
+    'agent': 'qmixrnn',
+    'agent_output_type': 'pi_logits',
+    'agent_return_logits': False,
+    'batch_size': 32,
+    'batch_size_run': 1,
+    'buffer_algo': None,
+    'buffer_chunk_size': None,
+    'buffer_cpu_only': True,
+    'buffer_device': None,
+    'buffer_mode': 'transitions',
+    'buffer_size': 5000,
+    'buffer_warmup': 0,
+    'checkpoint_path': '',
+    'continuous_actions': False,
+    'critic_lr': 0.0005,
+    'critic_train_reps': 1,
+    'debug': False,
+    'discretize_actions': False,
+    'double_q': False,
+    'elite_fraction': 0.2,
+    'env': 'firefighters',
+    'env_args': {   'episode_limit': 150,
+                    'reward_scale': 20,
+                    'scenario_dict': 'infinite',
+                    'seed': 646150865,
+                    'state_last_action': False},
+    'epsilon_anneal_time': 50000,
+    'epsilon_decay_mode': None,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 0.5,
+    'evaluate': False,
+    'exploration_mode': 'gaussian',
+    'final_ou_noise_scale': 0.0,
+    'frac': 0.005,
+    'gamma': 0.99,
+    'gated': False,
+    'grad_norm_clip': 10,
+    'hyper_initialization_nonzeros': 0,
+    'hypernet_embed': 64,
+    'hypernet_layers': 2,
+    'label': 'default_label',
+    'learn_interval': 1,
+    'learner': 'facmac_learner_discrete',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.0025,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'mixer': 'qmix',
+    'mixing_embed_dim': 32,
+    'mutation_prob': 0.9,
+    'n_runners': None,
+    'n_train': 1,
+    'name': 'facmac_smac',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'optimizer': 'adam',
+    'ou_noise_scale': 0.3,
+    'ou_sigma': 0.2,
+    'ou_stop_episode': 100,
+    'ou_theta': 0.15,
+    'plot_loss_network': False,
+    'pop_size': 5,
+    'pr_dim': 64,
+    'prob_reset_and_sup': 0.05,
+    'q_embed_dim': 1,
+    'q_nstep': 0,
+    'recurrent_critic': False,
+    'repeat_id': 1,
+    'rl_to_ea_synch_period': 1,
+    'rnn_hidden_dim': 64,
+    'run_mode': None,
+    'runner': 'episode',
+    'runner_log_interval': 2000,
+    'runner_scope': 'episodic',
+    'save_model': False,
+    'save_model_interval': 10000,
+    'save_replay': False,
+    'seed': 646150865,
+    'skip_connections': False,
+    'start_steps': 0,
+    'start_timesteps': 10000,
+    'state_alpha': 0.001,
+    't_max': 15000000,
+    'target_update_interval': 200,
+    'target_update_mode': 'hard',
+    'target_update_tau': 0.001,
+    'td_lambda': 0.8,
+    'test_greedy': True,
+    'test_interval': 10000,
+    'test_nepisode': 32,
+    'testing_on': True,
+    'use_buffer_compression': False,
+    'use_cuda': False,
+    'use_tensorboard': False,
+    'verbose': False,
+    'weight_decay': True,
+    'weight_decay_factor': 0.0001}
+
+[DEBUG 11:31:53] git.cmd Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/data/gu-di/RACE, universal_newlines=False, shell=None, istream=None)
+[DEBUG 11:31:54] wandb no default config file found in config-defaults.yaml
+[INFO 11:31:55] my_main Beginning training for 15000000 timesteps
+[INFO 11:31:55] my_main t_env: 84 / 15000000
+[INFO 11:31:55] my_main Estimated time left: 2 minutes, 14 seconds. Time passed: 0 seconds
+[INFO 11:32:05] my_main Recent Stats | t_env:       2049 | Episode:       25
+buildings_burned_mean:     3.0000	buildings_completed_mean:  0.0000	buildings_health_delta_mean: -1.3895	ep_length_mean:           84.0000
+epsilon:                   0.5000	fires_extinguished_mean:   0.0000	prop_buildings_completed_mean:  0.0000	return_mean:             -21.7339
+return_std:                0.0000	solved_mean:               0.0000	tasks_changed_mean:        1.0000	test_buildings_burned_mean:  4.5417
+test_buildings_completed_mean:  0.0833	test_buildings_health_delta_mean: -2.1909	test_ep_length_mean:      86.7917	test_episode_limit_mean:   0.1562
+test_fires_extinguished_mean:  0.8438	test_prop_buildings_completed_mean:  0.0199	test_return_mean:        -33.0110	test_return_std:          14.1340
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.8958	test_types_per_build_mean:  0.3151	test_types_per_firefight_mean:  0.4293
+
+[INFO 11:32:39] my_main Recent Stats | t_env:       4097 | Episode:       49
+buildings_burned_mean:     4.0600	buildings_completed_mean:  0.0000	buildings_health_delta_mean: -2.0169	critic_grad_norm:          5.9129
+critic_loss:              10.5137	ep_length_mean:           82.2800	epsilon:                   0.4816	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0000	return_mean:             -29.8145	return_std:                7.3501	solved_mean:               0.0000
+target_mean:              -0.2535	tasks_changed_mean:        1.0000	td_error_abs:              2.1638	test_buildings_burned_mean:  4.5417
+test_buildings_completed_mean:  0.0833	test_buildings_health_delta_mean: -2.1909	test_ep_length_mean:      86.7917	test_episode_limit_mean:   0.1562
+test_fires_extinguished_mean:  0.8438	test_prop_buildings_completed_mean:  0.0199	test_return_mean:        -33.0110	test_return_std:          14.1340
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.8958	test_types_per_build_mean:  0.3151	test_types_per_firefight_mean:  0.4293
+types_per_build_mean:      0.5300	types_per_firefight_mean:  0.5700	
+[INFO 11:33:22] my_main Recent Stats | t_env:       6123 | Episode:       74
+buildings_burned_mean:     4.5678	buildings_completed_mean:  0.0278	buildings_health_delta_mean: -2.2581	critic_grad_norm:          6.6197
+critic_loss:               7.2527	ep_length_mean:           83.7839	epsilon:                   0.4631	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0041	return_mean:             -33.5026	return_std:                8.9609	solved_mean:               0.0000
+target_mean:              -0.2527	tasks_changed_mean:        1.0000	td_error_abs:              1.8385	test_buildings_burned_mean:  4.5417
+test_buildings_completed_mean:  0.0833	test_buildings_health_delta_mean: -2.1909	test_ep_length_mean:      86.7917	test_episode_limit_mean:   0.1562
+test_fires_extinguished_mean:  0.8438	test_prop_buildings_completed_mean:  0.0199	test_return_mean:        -33.0110	test_return_std:          14.1340
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.8958	test_types_per_build_mean:  0.3151	test_types_per_firefight_mean:  0.4293
+types_per_build_mean:      0.5775	types_per_firefight_mean:  0.4829	
+[INFO 11:34:05] my_main Recent Stats | t_env:       8161 | Episode:      100
+buildings_burned_mean:     4.5658	buildings_completed_mean:  0.0208	buildings_health_delta_mean: -2.3113	critic_grad_norm:          5.0385
+critic_loss:               5.8356	ep_length_mean:           83.0579	epsilon:                   0.4449	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0030	return_mean:             -33.6497	return_std:               10.1972	solved_mean:               0.0000
+target_mean:              -0.2570	tasks_changed_mean:        1.0000	td_error_abs:              1.6531	test_buildings_burned_mean:  4.5417
+test_buildings_completed_mean:  0.0833	test_buildings_health_delta_mean: -2.1909	test_ep_length_mean:      86.7917	test_episode_limit_mean:   0.1562
+test_fires_extinguished_mean:  0.8438	test_prop_buildings_completed_mean:  0.0199	test_return_mean:        -33.0110	test_return_std:          14.1340
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.8958	test_types_per_build_mean:  0.3151	test_types_per_firefight_mean:  0.4293
+types_per_build_mean:      0.4917	types_per_firefight_mean:  0.4686	
+[INFO 11:35:03] my_main t_env: 10434 / 15000000
+[INFO 11:35:03] my_main Estimated time left: 3 days, 3 hours, 26 minutes, 35 seconds. Time passed: 3 minutes, 7 seconds
+[INFO 11:35:10] my_main Recent Stats | t_env:      10434 | Episode:      126
+buildings_burned_mean:     4.9159	buildings_completed_mean:  0.0537	buildings_health_delta_mean: -2.4714	critic_grad_norm:          4.1469
+critic_loss:               4.9994	ep_length_mean:           80.2401	epsilon:                   0.4083	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0083	return_mean:             -36.1702	return_std:               13.4602	solved_mean:               0.0000
+target_mean:              -0.2533	tasks_changed_mean:        1.0000	td_error_abs:              1.5144	test_buildings_burned_mean:  4.5438
+test_buildings_completed_mean:  0.1625	test_buildings_health_delta_mean: -2.2218	test_ep_length_mean:      82.1562	test_episode_limit_mean:   0.1562
+test_fires_extinguished_mean:  0.2687	test_prop_buildings_completed_mean:  0.0339	test_return_mean:        -33.1753	test_return_std:          14.4307
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.9688	test_types_per_build_mean:  0.4315	test_types_per_firefight_mean:  0.4293
+types_per_build_mean:      0.4323	types_per_firefight_mean:  0.3493	
+[INFO 11:35:58] my_main Recent Stats | t_env:      12752 | Episode:      131
+buildings_burned_mean:     4.7991	buildings_completed_mean:  0.1323	buildings_health_delta_mean: -2.3518	critic_grad_norm:          3.6496
+critic_loss:               4.4342	ep_length_mean:           78.7995	epsilon:                   0.3899	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0211	return_mean:             -35.1080	return_std:               13.1908	solved_mean:               0.0000
+target_mean:              -0.2533	tasks_changed_mean:        1.0000	td_error_abs:              1.4267	test_buildings_burned_mean:  4.5438
+test_buildings_completed_mean:  0.1625	test_buildings_health_delta_mean: -2.2218	test_ep_length_mean:      82.1562	test_episode_limit_mean:   0.1562
+test_fires_extinguished_mean:  0.2687	test_prop_buildings_completed_mean:  0.0339	test_return_mean:        -33.1753	test_return_std:          14.4307
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.9688	test_types_per_build_mean:  0.4315	test_types_per_firefight_mean:  0.4293
+types_per_build_mean:      0.4553	types_per_firefight_mean:  0.2424	
+[INFO 11:36:44] my_main Recent Stats | t_env:      14885 | Episode:      136
+buildings_burned_mean:     4.6009	buildings_completed_mean:  0.1675	buildings_health_delta_mean: -2.2427	critic_grad_norm:          2.6822
+critic_loss:               2.6776	ep_length_mean:           76.8856	epsilon:                   0.3712	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0277	return_mean:             -33.6112	return_std:               13.8668	solved_mean:               0.0000
+target_mean:              -0.2497	tasks_changed_mean:        1.0000	td_error_abs:              1.1792	test_buildings_burned_mean:  4.5438
+test_buildings_completed_mean:  0.1625	test_buildings_health_delta_mean: -2.2218	test_ep_length_mean:      82.1562	test_episode_limit_mean:   0.1562
+test_fires_extinguished_mean:  0.2687	test_prop_buildings_completed_mean:  0.0339	test_return_mean:        -33.1753	test_return_std:          14.4307
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.9688	test_types_per_build_mean:  0.4315	test_types_per_firefight_mean:  0.4293
+types_per_build_mean:      0.4196	types_per_firefight_mean:  0.1706	
+[INFO 11:37:29] my_main Recent Stats | t_env:      17123 | Episode:      141
+buildings_burned_mean:     4.4958	buildings_completed_mean:  0.2433	buildings_health_delta_mean: -2.1031	critic_grad_norm:          1.5306
+critic_loss:               2.2214	ep_length_mean:           74.5786	epsilon:                   0.3529	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0467	return_mean:             -32.5600	return_std:               13.8756	solved_mean:               0.0000
+target_mean:              -0.2454	tasks_changed_mean:        1.0000	td_error_abs:              1.0447	test_buildings_burned_mean:  4.5438
+test_buildings_completed_mean:  0.1625	test_buildings_health_delta_mean: -2.2218	test_ep_length_mean:      82.1562	test_episode_limit_mean:   0.1562
+test_fires_extinguished_mean:  0.2687	test_prop_buildings_completed_mean:  0.0339	test_return_mean:        -33.1753	test_return_std:          14.4307
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.9688	test_types_per_build_mean:  0.4315	test_types_per_firefight_mean:  0.4293
+types_per_build_mean:      0.4918	types_per_firefight_mean:  0.0895	
