@@ -3596,3 +3596,51 @@ test_buildings_burned_mean:  3.4562	test_buildings_completed_mean:  1.3500	test_
 test_episode_limit_mean:   0.1938	test_fires_extinguished_mean:  2.8250	test_prop_buildings_completed_mean:  0.2771	test_return_mean:        -22.4447
 test_return_std:          13.7393	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.8063	test_types_per_build_mean:  0.9474
 test_types_per_firefight_mean:  0.8658	types_per_build_mean:      1.0188	types_per_firefight_mean:  0.8299	
+[INFO 10:44:03] my_main Recent Stats | t_env:     406765 | Episode:      866
+buildings_burned_mean:     3.2000	buildings_completed_mean:  1.2371	buildings_health_delta_mean: -0.9547	critic_grad_norm:         29.6992
+critic_loss:               1.1445	ep_length_mean:           94.3028	episode_limit_mean:        0.2325	epsilon:                   0.0500
+fires_extinguished_mean:   2.3245	prop_buildings_completed_mean:  0.2723	return_mean:             -20.8640	return_std:               13.2691
+solved_mean:               0.0105	target_mean:              -1.2045	tasks_changed_mean:        0.7675	td_error_abs:              0.7540
+test_buildings_burned_mean:  3.4562	test_buildings_completed_mean:  1.3500	test_buildings_health_delta_mean: -1.0200	test_ep_length_mean:      94.8937
+test_episode_limit_mean:   0.1938	test_fires_extinguished_mean:  2.8250	test_prop_buildings_completed_mean:  0.2771	test_return_mean:        -22.4447
+test_return_std:          13.7393	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.8063	test_types_per_build_mean:  0.9474
+test_types_per_firefight_mean:  0.8658	types_per_build_mean:      1.0016	types_per_firefight_mean:  0.8432	
+[INFO 10:44:57] my_main Recent Stats | t_env:     409268 | Episode:      870
+buildings_burned_mean:     3.2667	buildings_completed_mean:  1.2371	buildings_health_delta_mean: -0.9731	critic_grad_norm:         30.3942
+critic_loss:               1.1706	ep_length_mean:           94.5409	episode_limit_mean:        0.2039	epsilon:                   0.0500
+fires_extinguished_mean:   2.1816	prop_buildings_completed_mean:  0.2700	return_mean:             -21.2752	return_std:               14.3109
+solved_mean:               0.0201	target_mean:              -1.1582	tasks_changed_mean:        0.7961	td_error_abs:              0.7579
+test_buildings_burned_mean:  3.4562	test_buildings_completed_mean:  1.3500	test_buildings_health_delta_mean: -1.0200	test_ep_length_mean:      94.8937
+test_episode_limit_mean:   0.1938	test_fires_extinguished_mean:  2.8250	test_prop_buildings_completed_mean:  0.2771	test_return_mean:        -22.4447
+test_return_std:          13.7393	test_solved_mean:          0.0125	test_tasks_changed_mean:   0.8063	test_types_per_build_mean:  0.9474
+test_types_per_firefight_mean:  0.8658	types_per_build_mean:      1.0103	types_per_firefight_mean:  0.8727	
+[INFO 10:45:24] my_main t_env: 410407 / 15000000
+[INFO 10:45:24] my_main Estimated time left: 3 days, 22 hours, 31 minutes, 52 seconds. Time passed: 2 hours, 51 minutes, 53 seconds
+[INFO 10:45:42] my_main Updated all target networks
+[INFO 10:45:59] my_main Recent Stats | t_env:     411405 | Episode:      874
+buildings_burned_mean:     3.3641	buildings_completed_mean:  1.1998	buildings_health_delta_mean: -1.0222	critic_grad_norm:         28.6463
+critic_loss:               1.1070	ep_length_mean:           99.4536	episode_limit_mean:        0.2316	epsilon:                   0.0500
+fires_extinguished_mean:   2.5329	prop_buildings_completed_mean:  0.2599	return_mean:             -21.9517	return_std:               14.8940
+solved_mean:               0.0201	target_mean:              -1.1595	tasks_changed_mean:        0.7684	td_error_abs:              0.7234
+test_buildings_burned_mean:  3.5375	test_buildings_completed_mean:  1.2437	test_buildings_health_delta_mean: -1.1049	test_ep_length_mean:      92.5375
+test_episode_limit_mean:   0.1938	test_fires_extinguished_mean:  2.6187	test_prop_buildings_completed_mean:  0.2650	test_return_mean:        -23.1605
+test_return_std:          13.7272	test_solved_mean:          0.0250	test_tasks_changed_mean:   0.8063	test_types_per_build_mean:  0.9141
+test_types_per_firefight_mean:  0.8376	types_per_build_mean:      1.0174	types_per_firefight_mean:  0.9297	
+[INFO 10:46:53] my_main Recent Stats | t_env:     413578 | Episode:      878
+buildings_burned_mean:     3.3714	buildings_completed_mean:  1.2253	buildings_health_delta_mean: -1.0194	critic_grad_norm:         26.5278
+critic_loss:               1.1221	ep_length_mean:          101.0443	episode_limit_mean:        0.2326	epsilon:                   0.0500
+fires_extinguished_mean:   2.8025	prop_buildings_completed_mean:  0.2662	return_mean:             -21.8884	return_std:               14.5678
+solved_mean:               0.0287	target_mean:              -1.0915	tasks_changed_mean:        0.7674	td_error_abs:              0.7219
+test_buildings_burned_mean:  3.5375	test_buildings_completed_mean:  1.2437	test_buildings_health_delta_mean: -1.1049	test_ep_length_mean:      92.5375
+test_episode_limit_mean:   0.1938	test_fires_extinguished_mean:  2.6187	test_prop_buildings_completed_mean:  0.2650	test_return_mean:        -23.1605
+test_return_std:          13.7272	test_solved_mean:          0.0250	test_tasks_changed_mean:   0.8063	test_types_per_build_mean:  0.9141
+test_types_per_firefight_mean:  0.8376	types_per_build_mean:      1.0511	types_per_firefight_mean:  0.9283	
+[INFO 10:47:46] my_main Recent Stats | t_env:     415839 | Episode:      882
+buildings_burned_mean:     3.4918	buildings_completed_mean:  1.2912	buildings_health_delta_mean: -1.0629	critic_grad_norm:         25.1232
+critic_loss:               1.1528	ep_length_mean:           97.9450	episode_limit_mean:        0.1868	epsilon:                   0.0500
+fires_extinguished_mean:   2.5608	prop_buildings_completed_mean:  0.2770	return_mean:             -22.7003	return_std:               15.5405
+solved_mean:               0.0356	target_mean:              -1.0679	tasks_changed_mean:        0.8132	td_error_abs:              0.7404
+test_buildings_burned_mean:  3.5375	test_buildings_completed_mean:  1.2437	test_buildings_health_delta_mean: -1.1049	test_ep_length_mean:      92.5375
+test_episode_limit_mean:   0.1938	test_fires_extinguished_mean:  2.6187	test_prop_buildings_completed_mean:  0.2650	test_return_mean:        -23.1605
+test_return_std:          13.7272	test_solved_mean:          0.0250	test_tasks_changed_mean:   0.8063	test_types_per_build_mean:  0.9141
+test_types_per_firefight_mean:  0.8376	types_per_build_mean:      1.0504	types_per_firefight_mean:  0.9173	
