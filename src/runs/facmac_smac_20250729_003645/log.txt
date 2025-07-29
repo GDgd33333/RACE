@@ -1,0 +1,98 @@
+[INFO] Logging to: src/runs/facmac_smac_20250729_003645/log.txt
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+{'entity_shape': 58, 'n_actions': 12, 'n_agents': 8, 'n_entities': 16, 'episode_limit': 150, 'n_tasks': 8, 'state_shape': 608, 'obs_shape': 76}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+===================================================================================
+pop: [<controllers.EA_basic_controller.Gen_BasicMAC object at 0x7a2b79593520>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7a2b79495e80>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7a2b794a9640>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7a2b794a9a30>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7a2b794a9e20>]
+===================================================================================
+/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/optim/adam.py:48: UserWarning: optimizer contains a parameter group with duplicate parameters; in future, this will cause an error; see github.com/pytorch/pytorch/issues/40967 for more information
+  super(Adam, self).__init__(params, defaults)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+RL eval  -32.02716877737756 0.0
+EA eval  -34.84756573484426 0.0
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+RL eval  -34.76743670833711 0.0
+EA eval  -33.99418779800656 0.0
+Sync from RL --> Nevo
+EA evolution start ...
+EA evolution end.
+Traceback (most recent call last):
+  File "src/main.py", line 168, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 80, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 438, in run_sequential
+    learner.train(episode_sample, all_teams, runner.t_env, episode)
+  File "/data/gu-di/RACE/src/learners/EA_facmac_learner_discrete.py", line 333, in train
+    V_loss.backward()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/_tensor.py", line 255, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/autograd/__init__.py", line 147, in backward
+    Variable._execution_engine.run_backward(
+KeyboardInterrupt
+
+[DEBUG 00:36:45] wandb no default config file found in config-defaults.yaml
+[INFO 00:36:47] my_main Beginning training for 5005000 timesteps
+[INFO 00:36:47] my_main t_env: 98 / 5005000
+[INFO 00:36:47] my_main Estimated time left: 52 seconds. Time passed: 0 seconds
+[INFO 00:36:56] my_main Recent Stats | t_env:       2017 | Episode:       26
+buildings_burned_mean:     7.0000	buildings_completed_mean:  1.0000	buildings_health_delta_mean: -3.1446	ep_length_mean:           98.0000
+epsilon:                   0.5000	fires_extinguished_mean:   0.0000	prop_buildings_completed_mean:  0.1250	return_mean:             -50.1313
+return_std:                0.0000	solved_mean:               0.0000	tasks_changed_mean:        1.0000	test_buildings_burned_mean:  4.5521
+test_buildings_completed_mean:  0.7083	test_buildings_health_delta_mean: -1.9454	test_ep_length_mean:      80.2083	test_episode_limit_mean:   0.0938
+test_fires_extinguished_mean:  0.7917	test_prop_buildings_completed_mean:  0.1265	test_return_mean:        -32.1739	test_return_std:          13.2768
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.9375	test_types_per_build_mean:  0.8503	test_types_per_firefight_mean:  0.7186
+types_per_build_mean:      1.0000	types_per_firefight_mean:  1.0000	
+[INFO 00:37:31] my_main Recent Stats | t_env:       4054 | Episode:       54
+buildings_burned_mean:     5.8462	buildings_completed_mean:  0.5000	buildings_health_delta_mean: -2.7561	critic_grad_norm:          5.2914
+critic_loss:              10.9677	ep_length_mean:           87.6154	epsilon:                   0.4818	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0625	return_mean:             -42.3482	return_std:                6.7342	solved_mean:               0.0000
+target_mean:              -0.2499	tasks_changed_mean:        1.0000	td_error_abs:              2.2245	test_buildings_burned_mean:  4.5521
+test_buildings_completed_mean:  0.7083	test_buildings_health_delta_mean: -1.9454	test_ep_length_mean:      80.2083	test_episode_limit_mean:   0.0938
+test_fires_extinguished_mean:  0.7917	test_prop_buildings_completed_mean:  0.1265	test_return_mean:        -32.1739	test_return_std:          13.2768
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.9375	test_types_per_build_mean:  0.8503	test_types_per_firefight_mean:  0.7186
+types_per_build_mean:      0.7885	types_per_firefight_mean:  0.8173	
+[INFO 00:38:09] my_main Recent Stats | t_env:       6119 | Episode:       79
+buildings_burned_mean:     5.4808	buildings_completed_mean:  0.3452	buildings_health_delta_mean: -2.6438	critic_grad_norm:          5.3862
+critic_loss:               7.8930	ep_length_mean:           82.4222	epsilon:                   0.4635	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0432	return_mean:             -39.9141	return_std:                9.2385	solved_mean:               0.0000
+target_mean:              -0.2566	tasks_changed_mean:        1.0000	td_error_abs:              1.9477	test_buildings_burned_mean:  4.5521
+test_buildings_completed_mean:  0.7083	test_buildings_health_delta_mean: -1.9454	test_ep_length_mean:      80.2083	test_episode_limit_mean:   0.0938
+test_fires_extinguished_mean:  0.7917	test_prop_buildings_completed_mean:  0.1265	test_return_mean:        -32.1739	test_return_std:          13.2768
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.9375	test_types_per_build_mean:  0.8503	test_types_per_firefight_mean:  0.7186
+types_per_build_mean:      0.6447	types_per_firefight_mean:  0.6401	
+[INFO 00:38:48] my_main Recent Stats | t_env:       8140 | Episode:      105
+buildings_burned_mean:     5.3506	buildings_completed_mean:  0.2589	buildings_health_delta_mean: -2.6246	critic_grad_norm:          4.2062
+critic_loss:               6.3037	ep_length_mean:           82.1566	epsilon:                   0.4449	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0324	return_mean:             -39.1173	return_std:               10.7664	solved_mean:               0.0000
+target_mean:              -0.2504	tasks_changed_mean:        1.0000	td_error_abs:              1.7099	test_buildings_burned_mean:  4.5521
+test_buildings_completed_mean:  0.7083	test_buildings_health_delta_mean: -1.9454	test_ep_length_mean:      80.2083	test_episode_limit_mean:   0.0938
+test_fires_extinguished_mean:  0.7917	test_prop_buildings_completed_mean:  0.1265	test_return_mean:        -32.1739	test_return_std:          13.2768
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.9375	test_types_per_build_mean:  0.8503	test_types_per_firefight_mean:  0.7186
+types_per_build_mean:      0.5535	types_per_firefight_mean:  0.5301	
+[INFO 00:39:38] my_main t_env: 10560 / 5005000
+[INFO 00:39:38] my_main Estimated time left: 22 hours, 38 minutes, 53 seconds. Time passed: 2 minutes, 50 seconds
+[INFO 00:39:45] my_main Recent Stats | t_env:      10560 | Episode:      129
+buildings_burned_mean:     4.9051	buildings_completed_mean:  0.0071	buildings_health_delta_mean: -2.4753	critic_grad_norm:          3.6278
+critic_loss:               5.4047	ep_length_mean:           78.6425	epsilon:                   0.4082	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0009	return_mean:             -36.1316	return_std:               15.1148	solved_mean:               0.0000
+target_mean:              -0.2409	tasks_changed_mean:        1.0000	td_error_abs:              1.5587	test_buildings_burned_mean:  4.7062
+test_buildings_completed_mean:  0.3187	test_buildings_health_delta_mean: -2.2082	test_ep_length_mean:      78.1188	test_episode_limit_mean:   0.0938
+test_fires_extinguished_mean:  0.3750	test_prop_buildings_completed_mean:  0.0562	test_return_mean:        -34.0298	test_return_std:          14.4127
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.9750	test_types_per_build_mean:  0.8503	test_types_per_firefight_mean:  0.7186
+types_per_build_mean:      0.3287	types_per_firefight_mean:  0.2785	
+[DEBUG 00:39:49] pymarl Stopping Heartbeat
+[WARNING 00:39:49] pymarl Aborted after 0:03:04!

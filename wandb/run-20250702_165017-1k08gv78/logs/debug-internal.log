@@ -1,0 +1,78 @@
+2025-07-02 16:50:17,506 INFO    StreamThr :4120153 [internal.py:wandb_internal():87] W&B internal server running at pid: 4120153, started at: 2025-07-02 16:50:17.505045
+2025-07-02 16:50:17,509 DEBUG   HandlerThread:4120153 [handler.py:handle_request():139] handle_request: status
+2025-07-02 16:50:17,510 DEBUG   SenderThread:4120153 [sender.py:send_request():317] send_request: status
+2025-07-02 16:50:17,513 DEBUG   SenderThread:4120153 [sender.py:send():303] send: header
+2025-07-02 16:50:17,513 INFO    WriterThread:4120153 [datastore.py:open_for_write():75] open: /data/gu-di/RACE/wandb/run-20250702_165017-1k08gv78/run-1k08gv78.wandb
+2025-07-02 16:50:17,513 DEBUG   SenderThread:4120153 [sender.py:send():303] send: run
+2025-07-02 16:50:22,503 DEBUG   HandlerThread:4120153 [handler.py:handle_request():139] handle_request: keepalive
+2025-07-02 16:50:27,504 DEBUG   HandlerThread:4120153 [handler.py:handle_request():139] handle_request: keepalive
+2025-07-02 16:50:32,505 DEBUG   HandlerThread:4120153 [handler.py:handle_request():139] handle_request: keepalive
+2025-07-02 16:50:37,506 DEBUG   HandlerThread:4120153 [handler.py:handle_request():139] handle_request: keepalive
+2025-07-02 16:50:42,507 DEBUG   HandlerThread:4120153 [handler.py:handle_request():139] handle_request: keepalive
+2025-07-02 16:50:47,508 DEBUG   HandlerThread:4120153 [handler.py:handle_request():139] handle_request: keepalive
+2025-07-02 16:50:50,755 ERROR   SenderThread:4120153 [retry.py:__call__():154] Retry attempt failed:
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x7e258c3bda30>, 'Connection to api.wandb.ai timed out. (connect timeout=10)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7e258c3bda30>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 209, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7e258c3bda30>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+2025-07-02 16:50:52,117 DEBUG   HandlerThread:4120153 [handler.py:handle_request():139] handle_request: poll_exit
+2025-07-02 16:50:57,118 DEBUG   HandlerThread:4120153 [handler.py:handle_request():139] handle_request: keepalive
+2025-07-02 16:50:58,551 WARNING StreamThr :4120153 [internal.py:is_dead():386] Internal process exiting, parent pid 4119866 disappeared
+2025-07-02 16:50:58,551 ERROR   StreamThr :4120153 [internal.py:wandb_internal():146] Internal process shutdown.
+2025-07-02 16:50:59,118 INFO    WriterThread:4120153 [datastore.py:close():279] close: /data/gu-di/RACE/wandb/run-20250702_165017-1k08gv78/run-1k08gv78.wandb
+2025-07-02 16:50:59,121 INFO    HandlerThread:4120153 [handler.py:finish():814] shutting down handler

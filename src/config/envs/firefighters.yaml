@@ -1,0 +1,9 @@
+env: firefighters
+
+env_args:
+  scenario_dict: "infinite"  # 或指定场景如'single_scen'
+  episode_limit: 150
+  reward_scale: 20
+  state_last_action: Flase
+
+t_max: 2000000

@@ -1,0 +1,274 @@
+{
+  "buildings_burned_mean": [
+    4.0,
+    4.2592592592592595
+  ],
+  "buildings_burned_mean_T": [
+    89,
+    2147
+  ],
+  "buildings_completed_mean": [
+    0.0,
+    0.18518518518518517
+  ],
+  "buildings_completed_mean_T": [
+    89,
+    2147
+  ],
+  "buildings_health_delta_mean": [
+    -2.4511552510948147,
+    -2.1221426995370254
+  ],
+  "buildings_health_delta_mean_T": [
+    89,
+    2147
+  ],
+  "ep_length_mean": [
+    89.0,
+    76.22222222222223
+  ],
+  "ep_length_mean_T": [
+    89,
+    2147
+  ],
+  "episode": [
+    26
+  ],
+  "episode_T": [
+    2022
+  ],
+  "epsilon": [
+    0.5,
+    0.481352
+  ],
+  "epsilon_T": [
+    89,
+    2147
+  ],
+  "fires_extinguished_mean": [
+    0.0,
+    0.0
+  ],
+  "fires_extinguished_mean_T": [
+    89,
+    2147
+  ],
+  "prop_buildings_completed_mean": [
+    0.0,
+    0.029012345679012345
+  ],
+  "prop_buildings_completed_mean_T": [
+    89,
+    2147
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -30.738691914984713
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -31.24159617510888
+    }
+  ],
+  "return_mean_T": [
+    89,
+    2147
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 11.366288908143167
+    }
+  ],
+  "return_std_T": [
+    89,
+    2147
+  ],
+  "solved_mean": [
+    0.0,
+    0.0
+  ],
+  "solved_mean_T": [
+    89,
+    2147
+  ],
+  "tasks_changed_mean": [
+    1.0,
+    1.0
+  ],
+  "tasks_changed_mean_T": [
+    89,
+    2147
+  ],
+  "test_buildings_burned_mean": [
+    4.9375,
+    4.78125,
+    4.875
+  ],
+  "test_buildings_burned_mean_T": [
+    89,
+    89,
+    89
+  ],
+  "test_buildings_completed_mean": [
+    0.0,
+    0.0625,
+    0.0
+  ],
+  "test_buildings_completed_mean_T": [
+    89,
+    89,
+    89
+  ],
+  "test_buildings_health_delta_mean": [
+    -2.4802160763874994,
+    -2.4262279432001987,
+    -2.3564388867926502
+  ],
+  "test_buildings_health_delta_mean_T": [
+    89,
+    89,
+    89
+  ],
+  "test_ep_length_mean": [
+    79.375,
+    79.875,
+    78.25
+  ],
+  "test_ep_length_mean_T": [
+    89,
+    89,
+    89
+  ],
+  "test_episode_limit_mean": [
+    0.03125
+  ],
+  "test_episode_limit_mean_T": [
+    89
+  ],
+  "test_fires_extinguished_mean": [
+    0.0,
+    0.0625,
+    0.0
+  ],
+  "test_fires_extinguished_mean_T": [
+    89,
+    89,
+    89
+  ],
+  "test_prop_buildings_completed_mean": [
+    0.0,
+    0.008928571428571428,
+    0.0
+  ],
+  "test_prop_buildings_completed_mean_T": [
+    89,
+    89,
+    89
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -36.33887081290439
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -35.23339100941233
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -35.607173196448954
+    }
+  ],
+  "test_return_mean_T": [
+    89,
+    89,
+    89
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 14.05990652508208
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 12.344323552831346
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 15.522386516150089
+    }
+  ],
+  "test_return_std_T": [
+    89,
+    89,
+    89
+  ],
+  "test_solved_mean": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "test_solved_mean_T": [
+    89,
+    89,
+    89
+  ],
+  "test_tasks_changed_mean": [
+    1.0,
+    0.96875,
+    1.0
+  ],
+  "test_tasks_changed_mean_T": [
+    89,
+    89,
+    89
+  ],
+  "test_types_per_build_mean": [
+    0.09375
+  ],
+  "test_types_per_build_mean_T": [
+    89
+  ],
+  "test_types_per_firefight_mean": [
+    0.09375,
+    0.0625,
+    0.15625
+  ],
+  "test_types_per_firefight_mean_T": [
+    89,
+    89,
+    89
+  ],
+  "types_per_build_mean": [
+    1.0,
+    0.5555555555555556
+  ],
+  "types_per_build_mean_T": [
+    89,
+    2147
+  ],
+  "types_per_firefight_mean": [
+    1.0,
+    0.5925925925925926
+  ],
+  "types_per_firefight_mean_T": [
+    89,
+    2147
+  ]
+}

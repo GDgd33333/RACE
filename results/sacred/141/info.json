@@ -1,0 +1,517 @@
+{
+  "buildings_burned_mean": [
+    2.0,
+    4.708333333333333,
+    4.666666666666667,
+    4.875
+  ],
+  "buildings_burned_mean_T": [
+    49,
+    2090,
+    4091,
+    6114
+  ],
+  "buildings_completed_mean": [
+    0.0,
+    0.0,
+    0.08333333333333333,
+    0.041666666666666664
+  ],
+  "buildings_completed_mean_T": [
+    49,
+    2090,
+    4091,
+    6114
+  ],
+  "buildings_health_delta_mean": [
+    -1.3108052900076828,
+    -2.295154123440385,
+    -2.2797382954830847,
+    -2.365019138777503
+  ],
+  "buildings_health_delta_mean_T": [
+    49,
+    2090,
+    4091,
+    6114
+  ],
+  "critic_grad_norm": [
+    {
+      "py/reduce": [
+        {
+          "py/function": "torch._utils._rebuild_tensor_v2"
+        },
+        {
+          "py/tuple": [
+            {
+              "py/reduce": [
+                {
+                  "py/function": "torch.storage._load_from_bytes"
+                },
+                {
+                  "py/tuple": [
+                    {
+                      "py/b64": "gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAAAGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAAaW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3JhZ2UKcQFYCgAAADEwMDM5MDQwMzJxAlgDAAAAY3B1cQNLAU50cQRRLoACXXEAWAoAAAAxMDAzOTA0MDMycQFhLgEAAAAAAAAAzpmJQA=="
+                    }
+                  ]
+                }
+              ]
+            },
+            0,
+            {
+              "py/tuple": []
+            },
+            {
+              "py/tuple": []
+            },
+            false,
+            {
+              "py/reduce": [
+                {
+                  "py/type": "collections.OrderedDict"
+                },
+                {
+                  "py/tuple": []
+                },
+                null,
+                null,
+                {
+                  "py/tuple": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "py/reduce": [
+        {
+          "py/function": "torch._utils._rebuild_tensor_v2"
+        },
+        {
+          "py/tuple": [
+            {
+              "py/reduce": [
+                {
+                  "py/function": "torch.storage._load_from_bytes"
+                },
+                {
+                  "py/tuple": [
+                    {
+                      "py/b64": "gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAAAGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAAaW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3JhZ2UKcQFYCQAAADkxOTA4MjM4NHECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADkxOTA4MjM4NHEBYS4BAAAAAAAAAHwFWUA="
+                    }
+                  ]
+                }
+              ]
+            },
+            0,
+            {
+              "py/tuple": []
+            },
+            {
+              "py/tuple": []
+            },
+            false,
+            {
+              "py/reduce": [
+                {
+                  "py/type": "collections.OrderedDict"
+                },
+                {
+                  "py/tuple": []
+                },
+                null,
+                null,
+                {
+                  "py/tuple": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "py/reduce": [
+        {
+          "py/function": "torch._utils._rebuild_tensor_v2"
+        },
+        {
+          "py/tuple": [
+            {
+              "py/reduce": [
+                {
+                  "py/function": "torch.storage._load_from_bytes"
+                },
+                {
+                  "py/tuple": [
+                    {
+                      "py/b64": "gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAAAGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAAaW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3JhZ2UKcQFYCQAAADk2ODc3OTAyNHECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADk2ODc3OTAyNHEBYS4BAAAAAAAAANnwCkA="
+                    }
+                  ]
+                }
+              ]
+            },
+            0,
+            {
+              "py/tuple": []
+            },
+            {
+              "py/tuple": []
+            },
+            false,
+            {
+              "py/reduce": [
+                {
+                  "py/type": "collections.OrderedDict"
+                },
+                {
+                  "py/tuple": []
+                },
+                null,
+                null,
+                {
+                  "py/tuple": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "critic_grad_norm_T": [
+    2619,
+    4699,
+    6712
+  ],
+  "critic_loss": [
+    8.760905265808105,
+    3.934408187866211,
+    2.6806347370147705
+  ],
+  "critic_loss_T": [
+    2619,
+    4699,
+    6712
+  ],
+  "ep_length_mean": [
+    49.0,
+    85.04166666666667,
+    83.375,
+    84.29166666666667
+  ],
+  "ep_length_mean_T": [
+    49,
+    2090,
+    4091,
+    6114
+  ],
+  "episode": [
+    24,
+    49,
+    73
+  ],
+  "episode_T": [
+    2005,
+    4091,
+    6114
+  ],
+  "epsilon": [
+    0.5,
+    0.481955,
+    0.464054,
+    0.445748
+  ],
+  "epsilon_T": [
+    49,
+    2090,
+    4091,
+    6114
+  ],
+  "fires_extinguished_mean": [
+    0.0,
+    0.0,
+    0.041666666666666664,
+    0.0
+  ],
+  "fires_extinguished_mean_T": [
+    49,
+    2090,
+    4091,
+    6114
+  ],
+  "prop_buildings_completed_mean": [
+    0.0,
+    0.0,
+    0.03125,
+    0.010416666666666666
+  ],
+  "prop_buildings_completed_mean_T": [
+    49,
+    2090,
+    4091,
+    6114
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -15.62001555884612
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -34.44653173560895
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -34.12545577102865
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -35.62015432973774
+    }
+  ],
+  "return_mean_T": [
+    49,
+    2090,
+    4091,
+    6114
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 12.618175975252731
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 13.380079220326229
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 13.190056260793947
+    }
+  ],
+  "return_std_T": [
+    49,
+    2090,
+    4091,
+    6114
+  ],
+  "solved_mean": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "solved_mean_T": [
+    49,
+    2090,
+    4091,
+    6114
+  ],
+  "target_mean": [
+    -0.22389321984476424,
+    -0.24513302752453053,
+    -0.2374667243000632
+  ],
+  "target_mean_T": [
+    2619,
+    4699,
+    6712
+  ],
+  "tasks_changed_mean": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "tasks_changed_mean_T": [
+    49,
+    2090,
+    4091,
+    6114
+  ],
+  "td_error_abs": [
+    1.8979296427548682,
+    1.5289693841224634,
+    1.274870717895919
+  ],
+  "td_error_abs_T": [
+    2619,
+    4699,
+    6712
+  ],
+  "test_buildings_burned_mean": [
+    5.09375,
+    5.25,
+    5.28125
+  ],
+  "test_buildings_burned_mean_T": [
+    49,
+    49,
+    49
+  ],
+  "test_buildings_completed_mean": [
+    0.15625,
+    0.0,
+    0.0
+  ],
+  "test_buildings_completed_mean_T": [
+    49,
+    49,
+    49
+  ],
+  "test_buildings_health_delta_mean": [
+    -2.4755246340722215,
+    -2.5578156937924392,
+    -2.7014202840824586
+  ],
+  "test_buildings_health_delta_mean_T": [
+    49,
+    49,
+    49
+  ],
+  "test_ep_length_mean": [
+    84.90625,
+    78.65625,
+    83.84375
+  ],
+  "test_ep_length_mean_T": [
+    49,
+    49,
+    49
+  ],
+  "test_fires_extinguished_mean": [
+    0.15625,
+    0.0,
+    0.0
+  ],
+  "test_fires_extinguished_mean_T": [
+    49,
+    49,
+    49
+  ],
+  "test_prop_buildings_completed_mean": [
+    0.028125,
+    0.0,
+    0.0
+  ],
+  "test_prop_buildings_completed_mean_T": [
+    49,
+    49,
+    49
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -37.17525627668299
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -38.405340275860084
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -39.01153024730132
+    }
+  ],
+  "test_return_mean_T": [
+    49,
+    49,
+    49
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 15.6501133170899
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 15.155159768544301
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 15.227093869110591
+    }
+  ],
+  "test_return_std_T": [
+    49,
+    49,
+    49
+  ],
+  "test_solved_mean": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "test_solved_mean_T": [
+    49,
+    49,
+    49
+  ],
+  "test_tasks_changed_mean": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "test_tasks_changed_mean_T": [
+    49,
+    49,
+    49
+  ],
+  "test_types_per_build_mean": [
+    0.31448863636363633,
+    0.21875
+  ],
+  "test_types_per_build_mean_T": [
+    49,
+    49
+  ],
+  "test_types_per_firefight_mean": [
+    0.21875,
+    0.2828758318209317
+  ],
+  "test_types_per_firefight_mean_T": [
+    49,
+    49
+  ],
+  "types_per_build_mean": [
+    0.5833333333333334,
+    0.5563750862663907,
+    0.2916666666666667
+  ],
+  "types_per_build_mean_T": [
+    2090,
+    4091,
+    6114
+  ],
+  "types_per_firefight_mean": [
+    0.6666666666666666,
+    0.3333333333333333,
+    0.20833333333333334
+  ],
+  "types_per_firefight_mean_T": [
+    2090,
+    4091,
+    6114
+  ]
+}

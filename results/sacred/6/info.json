@@ -1,0 +1,136 @@
+{
+  "battle_won_mean": [
+    0.0
+  ],
+  "battle_won_mean_T": [
+    88
+  ],
+  "dead_allies_mean": [
+    3.0
+  ],
+  "dead_allies_mean_T": [
+    88
+  ],
+  "dead_enemies_mean": [
+    0.0
+  ],
+  "dead_enemies_mean_T": [
+    88
+  ],
+  "ep_length_mean": [
+    88.0
+  ],
+  "ep_length_mean_T": [
+    88
+  ],
+  "epsilon": [
+    0.5
+  ],
+  "epsilon_T": [
+    88
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 5.933823529411759
+    }
+  ],
+  "return_mean_T": [
+    88
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "return_std_T": [
+    88
+  ],
+  "test_battle_won_mean": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "test_battle_won_mean_T": [
+    88,
+    88,
+    88
+  ],
+  "test_dead_allies_mean": [
+    0.5,
+    0.0,
+    0.4375
+  ],
+  "test_dead_allies_mean_T": [
+    88,
+    88,
+    88
+  ],
+  "test_dead_enemies_mean": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "test_dead_enemies_mean_T": [
+    88,
+    88,
+    88
+  ],
+  "test_ep_length_mean": [
+    143.34375,
+    150.0,
+    145.0
+  ],
+  "test_ep_length_mean_T": [
+    88,
+    88,
+    88
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.32261029411764663
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.19944852941176444
+    }
+  ],
+  "test_return_mean_T": [
+    88,
+    88,
+    88
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 1.0235253014781809
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.6986739159743175
+    }
+  ],
+  "test_return_std_T": [
+    88,
+    88,
+    88
+  ]
+}

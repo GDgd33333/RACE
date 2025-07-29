@@ -1,0 +1,232 @@
+2025-06-28 17:26:41,551 INFO    StreamThr :1828326 [internal.py:wandb_internal():87] W&B internal server running at pid: 1828326, started at: 2025-06-28 17:26:41.550133
+2025-06-28 17:26:41,554 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: status
+2025-06-28 17:26:41,555 DEBUG   SenderThread:1828326 [sender.py:send_request():317] send_request: status
+2025-06-28 17:26:41,557 DEBUG   SenderThread:1828326 [sender.py:send():303] send: header
+2025-06-28 17:26:41,557 DEBUG   SenderThread:1828326 [sender.py:send():303] send: run
+2025-06-28 17:26:41,558 INFO    WriterThread:1828326 [datastore.py:open_for_write():75] open: /data/gu-di/RACE/wandb/run-20250628_172641-1s0ozmq1/run-1s0ozmq1.wandb
+2025-06-28 17:26:46,548 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: keepalive
+2025-06-28 17:26:51,549 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: keepalive
+2025-06-28 17:26:56,550 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: keepalive
+2025-06-28 17:27:01,551 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: keepalive
+2025-06-28 17:27:06,552 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: keepalive
+2025-06-28 17:27:11,553 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: keepalive
+2025-06-28 17:27:14,782 ERROR   SenderThread:1828326 [retry.py:__call__():154] Retry attempt failed:
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x7cdc73dfb970>, 'Connection to api.wandb.ai timed out. (connect timeout=10)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7cdc73dfb970>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 209, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7cdc73dfb970>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+2025-06-28 17:27:16,554 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: keepalive
+2025-06-28 17:27:21,555 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: keepalive
+2025-06-28 17:27:26,556 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: keepalive
+2025-06-28 17:27:31,557 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: keepalive
+2025-06-28 17:27:36,558 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: keepalive
+2025-06-28 17:27:42,575 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: poll_exit
+2025-06-28 17:27:47,577 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: keepalive
+2025-06-28 17:27:52,579 DEBUG   HandlerThread:1828326 [handler.py:handle_request():139] handle_request: keepalive
+2025-06-28 17:27:54,629 WARNING StreamThr :1828326 [internal.py:is_dead():386] Internal process exiting, parent pid 1828055 disappeared
+2025-06-28 17:27:54,629 ERROR   StreamThr :1828326 [internal.py:wandb_internal():146] Internal process shutdown.
+2025-06-28 17:27:55,577 INFO    WriterThread:1828326 [datastore.py:close():279] close: /data/gu-di/RACE/wandb/run-20250628_172641-1s0ozmq1/run-1s0ozmq1.wandb
+2025-06-28 17:27:55,582 INFO    HandlerThread:1828326 [handler.py:finish():814] shutting down handler
+2025-07-05 17:31:33,454 ERROR   StreamThr :1828326 [internal.py:wandb_internal():162] Thread SenderThread:
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x7cdc73da2cd0>, 'Connection to api.wandb.ai timed out. (connect timeout=10)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7cdc73da2cd0>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/apis/normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 427, in server_settings_introspection
+    res = self.gql(query)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 209, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7cdc73da2cd0>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/apis/normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1458, in upsert_run
+    self.server_settings_introspection()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/apis/normalize.py", line 62, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/apis/normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 427, in server_settings_introspection
+    res = self.gql(query)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 209, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+wandb.errors.CommError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7cdc73da2cd0>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/internal_util.py", line 49, in run
+    self._run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/internal_util.py", line 100, in _run
+    self._process(record)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/internal.py", line 309, in _process
+    self._sm.send(record)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/sender.py", line 305, in send
+    send_handler(record)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/sender.py", line 797, in send_run
+    self._init_run(run, config_value_dict)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/sender.py", line 823, in _init_run
+    server_run, inserted, server_messages = self._api.upsert_run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/apis/normalize.py", line 62, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/apis/normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1458, in upsert_run
+    self.server_settings_introspection()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/apis/normalize.py", line 62, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/apis/normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 427, in server_settings_introspection
+    res = self.gql(query)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 209, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/requests/adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+wandb.errors.CommError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7cdc73da2cd0>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))

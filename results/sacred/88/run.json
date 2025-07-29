@@ -1,0 +1,115 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/data/gu-di/RACE/src",
+    "dependencies": [
+      "munch==2.5.0",
+      "numpy==1.19.5",
+      "PyYAML==3.13",
+      "sacred==0.8.2",
+      "torch==1.9.0"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_be64e1d8915a70210c9ca98bcd6f539e.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_9d8732b605e10ccde1fb30445036005b.py"
+      ],
+      [
+        "utils/__init__.py",
+        "_sources/__init___d41d8cd98f00b204e9800998ecf8427e.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_a5a84fc83fc1dd6973924f225876e5c4.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"src/main.py\", line 56, in my_main\n    run(_run, config, _log)\n",
+    "  File \"/data/gu-di/RACE/src/run.py\", line 58, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"/data/gu-di/RACE/src/run.py\", line 409, in run_sequential\n    episode_batch, _, _ = runner.run(mac, test_mode=False, EA=False, learner=learner)\n",
+    "  File \"/data/gu-di/RACE/src/runners/episode_runner.py\", line 69, in run\n    \"obs\": [self.env.get_obs()]\n",
+    "  File \"/data/gu-di/RACE/src/envs/firefighters/firefighters.py\", line 1075, in get_obs\n    obs[i, :self_size] = all_entities[agent.obj_id]\n",
+    "NameError: name 'self_size' is not defined\n"
+  ],
+  "heartbeat": "2025-07-16T00:46:24.642236",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Platinum 8490H",
+    "gpus": {
+      "driver_version": "560.35.03",
+      "gpus": [
+        {
+          "model": "NVIDIA RTX A6000",
+          "persistence_mode": false,
+          "total_memory": 49140
+        },
+        {
+          "model": "NVIDIA RTX A6000",
+          "persistence_mode": false,
+          "total_memory": 49140
+        }
+      ]
+    },
+    "hostname": "sal1202-PowerEdge-R960",
+    "os": [
+      "Linux",
+      "Linux-6.8.0-60-generic-x86_64-with-glibc2.17"
+    ],
+    "python_version": "3.8.20"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "batch_size_run=1",
+        "state_alpha=0.001",
+        "frac=0.005",
+        "EA_alpha=1.0",
+        "Org_alpha=1.0",
+        "EA=1",
+        "EA_freq=1",
+        "SAME=0",
+        "use_cuda=False",
+        "t_max=2005000"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2025-07-16T00:46:13.835221",
+  "status": "FAILED",
+  "stop_time": "2025-07-16T00:46:24.643595"
+}

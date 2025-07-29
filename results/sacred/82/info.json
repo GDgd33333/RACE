@@ -1,0 +1,76 @@
+{
+  "buildings_burned_mean": [
+    8.0
+  ],
+  "buildings_burned_mean_T": [
+    87
+  ],
+  "buildings_completed_mean": [
+    0.0
+  ],
+  "buildings_completed_mean_T": [
+    87
+  ],
+  "buildings_health_delta_mean": [
+    -3.968912073013697
+  ],
+  "buildings_health_delta_mean_T": [
+    87
+  ],
+  "ep_length_mean": [
+    87.0
+  ],
+  "ep_length_mean_T": [
+    87
+  ],
+  "epsilon": [
+    0.5
+  ],
+  "epsilon_T": [
+    87
+  ],
+  "fires_extinguished_mean": [
+    0.0
+  ],
+  "fires_extinguished_mean_T": [
+    87
+  ],
+  "prop_buildings_completed_mean": [
+    0.0
+  ],
+  "prop_buildings_completed_mean_T": [
+    87
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -58.73209433239319
+    }
+  ],
+  "return_mean_T": [
+    87
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "return_std_T": [
+    87
+  ],
+  "solved_mean": [
+    0.0
+  ],
+  "solved_mean_T": [
+    87
+  ],
+  "tasks_changed_mean": [
+    1.0
+  ],
+  "tasks_changed_mean_T": [
+    87
+  ]
+}

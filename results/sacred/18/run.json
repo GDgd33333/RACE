@@ -1,0 +1,107 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/data/gu-di/RACE/src",
+    "dependencies": [
+      "munch==2.5.0",
+      "numpy==1.19.5",
+      "PyYAML==3.13",
+      "sacred==0.8.2",
+      "torch==1.9.0"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_be64e1d8915a70210c9ca98bcd6f539e.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_78daafeda3c72056014843e67a20daa2.py"
+      ],
+      [
+        "utils/__init__.py",
+        "_sources/__init___d41d8cd98f00b204e9800998ecf8427e.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_a5a84fc83fc1dd6973924f225876e5c4.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"src/main.py\", line 56, in my_main\n    run(_run, config, _log)\n",
+    "  File \"/data/gu-di/RACE/src/run.py\", line 58, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"/data/gu-di/RACE/src/run.py\", line 136, in run_sequential\n    args.EA_alpha) + \"_Map_env_\" + str(args.env_args[\"map_name\"]) + \"_Use_EA_\" + str(args.EA)\n",
+    "KeyError: 'map_name'\n"
+  ],
+  "heartbeat": "2025-07-15T12:01:09.702028",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Platinum 8490H",
+    "gpus": {
+      "driver_version": "560.35.03",
+      "gpus": [
+        {
+          "model": "NVIDIA RTX A6000",
+          "persistence_mode": false,
+          "total_memory": 49140
+        },
+        {
+          "model": "NVIDIA RTX A6000",
+          "persistence_mode": false,
+          "total_memory": 49140
+        }
+      ]
+    },
+    "hostname": "sal1202-PowerEdge-R960",
+    "os": [
+      "Linux",
+      "Linux-6.8.0-60-generic-x86_64-with-glibc2.17"
+    ],
+    "python_version": "3.8.20"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.scenario_dict=infinite",
+        "batch_size_run=1",
+        "use_cuda=False",
+        "t_max=2005000"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2025-07-15T12:01:09.687302",
+  "status": "FAILED",
+  "stop_time": "2025-07-15T12:01:09.703145"
+}
