@@ -12,7 +12,7 @@ smac环境：
   python3  src/main.py --config=facmac_smac --env-config=sc2 with env_args.map_name=MMM  batch_size_run=1 state_alpha=0.001 frac=0.005  EA_alpha=1.0  Org_alpha=1.0  EA=1  EA_freq=1 SAME=0  use_cuda=False t_max=2005000
 
 救火环境：
-  python3 src/main.py --config=facmac_smac --env-config=firefighters with batch_size_run=1 state_alpha=0.001 frac=0.005  EA_alpha=1.0  Org_alpha=1.0  EA=1  EA_freq=1 SAME=0  use_cuda=False t_max=15000000           
+  python3 src/main.py --config=facmac_smac --env-config=firefighters with batch_size_run=1 state_alpha=0.001 frac=0.005  EA_alpha=1.0  Org_alpha=1.0  EA=1  EA_freq=1 SAME=0  use_cuda=True t_max=15000000           
 
   #创建一个新的 tmux 会话，叫做 train 
   tmux new -s train   

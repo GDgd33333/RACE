@@ -1,0 +1,56 @@
+[INFO] Logging to: src/runs/facmac_smac_20250730_105506/log.txt
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+{'entity_shape': 58, 'n_actions': 12, 'n_agents': 8, 'n_entities': 16, 'episode_limit': 150, 'n_tasks': 8, 'state_shape': 608, 'obs_shape': 76}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+===================================================================================
+pop: [<controllers.EA_basic_controller.Gen_BasicMAC object at 0x78837cad7520>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7883749d6e80>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7883749ed640>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7883749eda30>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7883749ede20>]
+===================================================================================
+/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/optim/adam.py:48: UserWarning: optimizer contains a parameter group with duplicate parameters; in future, this will cause an error; see github.com/pytorch/pytorch/issues/40967 for more information
+  super(Adam, self).__init__(params, defaults)
+/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/cuda/__init__.py:106: UserWarning: 
+NVIDIA RTX A6000 with CUDA capability sm_86 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_70.
+If you want to use the NVIDIA RTX A6000 GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(incompatible_device_warn.format(device_name, capability, " ".join(arch_list), device_name))
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 409, in run_sequential
+    episode_batch, _, _ = runner.run(mac, test_mode=False, EA=False, learner=learner)
+  File "/data/gu-di/RACE/src/runners/episode_runner.py", line 58, in run
+    self.reset()
+  File "/data/gu-di/RACE/src/runners/episode_runner.py", line 52, in reset
+    self.batch = self.new_batch()
+  File "/data/gu-di/RACE/src/components/episode_buffer.py", line 31, in __init__
+    self._setup_data(self.scheme, self.groups, batch_size, max_seq_length, self.preprocess)
+  File "/data/gu-di/RACE/src/components/episode_buffer.py", line 78, in _setup_data
+    self.data.transition_data[field_key] = th.zeros((batch_size, max_seq_length, *shape), dtype=dtype, device=self.device)
+RuntimeError: CUDA error: no kernel image is available for execution on the device
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 347, in run_commandline
+    print_filtered_stacktrace()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/utils.py", line 493, in print_filtered_stacktrace
+    print(format_filtered_stacktrace(filter_traceback), file=sys.stderr)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/utils.py", line 528, in format_filtered_stacktrace
+    return "".join(filtered_traceback_format(tb_exception))
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/utils.py", line 568, in filtered_traceback_format
+    current_tb = tb_exception.exc_traceback
+AttributeError: 'TracebackException' object has no attribute 'exc_traceback'
