@@ -1,0 +1,128 @@
+[INFO] Logging to: src/runs/facmac_smac_20250918_155756/log.txt
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+{'entity_shape': 58, 'n_actions': 12, 'n_agents': 8, 'n_entities': 16, 'episode_limit': 150, 'n_tasks': 8, 'state_shape': 608, 'obs_shape': 76}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /opt/conda/conda-bld/pytorch_1724789259345/work/torch/csrc/utils/tensor_new.cpp:278.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+RL eval  -31.645019498964878 0.0
+EA eval  0 0.0
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 440, in run_sequential
+    learner.train(episode_sample, runner.t_env, episode)
+  File "/data/gu-di/RACE/src/learners/facmac_learner_discrete.py", line 119, in train
+    act_outs = self.mac.select_actions(batch, t_ep=t, t_env=t_env, test_mode=False, explore=False)
+  File "/data/gu-di/RACE/src/controllers/basic_controller.py", line 22, in select_actions
+    chosen_actions = self.action_selector.select_action(agent_outputs[bs], avail_actions[bs], t_env,
+  File "/data/gu-di/RACE/src/components/action_selectors.py", line 83, in select_action
+    picked_actions = GumbelSoftmax(logits=masked_policies).gumbel_softmax_sample()
+  File "/data/gu-di/RACE/src/components/action_selectors.py", line 23, in gumbel_softmax_sample
+    y = self.logits + self.sample_gumbel()
+  File "/data/gu-di/RACE/src/components/action_selectors.py", line 18, in sample_gumbel
+    return -th.log(-th.log(U + self.eps) + self.eps)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+BrokenPipeError: [Errno 32] Broken pipe
+Call stack:
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 248, in __call__
+    self._stop_heartbeat()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 284, in _stop_heartbeat
+    self.run_logger.debug("Stopping Heartbeat")
+Message: 'Stopping Heartbeat'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 440, in run_sequential
+    learner.train(episode_sample, runner.t_env, episode)
+  File "/data/gu-di/RACE/src/learners/facmac_learner_discrete.py", line 119, in train
+    act_outs = self.mac.select_actions(batch, t_ep=t, t_env=t_env, test_mode=False, explore=False)
+  File "/data/gu-di/RACE/src/controllers/basic_controller.py", line 22, in select_actions
+    chosen_actions = self.action_selector.select_action(agent_outputs[bs], avail_actions[bs], t_env,
+  File "/data/gu-di/RACE/src/components/action_selectors.py", line 83, in select_action
+    picked_actions = GumbelSoftmax(logits=masked_policies).gumbel_softmax_sample()
+  File "/data/gu-di/RACE/src/components/action_selectors.py", line 23, in gumbel_softmax_sample
+    y = self.logits + self.sample_gumbel()
+  File "/data/gu-di/RACE/src/components/action_selectors.py", line 18, in sample_gumbel
+    return -th.log(-th.log(U + self.eps) + self.eps)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+BrokenPipeError: [Errno 32] Broken pipe
+Call stack:
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 250, in __call__
+    self._emit_interrupted(status)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 380, in _emit_interrupted
+    self.run_logger.warning("Aborted after %s!", elapsed_time)
+Message: 'Aborted after %s!'
+Arguments: (datetime.timedelta(seconds=91),)
+Traceback (most recent call last):
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 440, in run_sequential
+    learner.train(episode_sample, runner.t_env, episode)
+  File "/data/gu-di/RACE/src/learners/facmac_learner_discrete.py", line 119, in train
+    act_outs = self.mac.select_actions(batch, t_ep=t, t_env=t_env, test_mode=False, explore=False)
+  File "/data/gu-di/RACE/src/controllers/basic_controller.py", line 22, in select_actions
+    chosen_actions = self.action_selector.select_action(agent_outputs[bs], avail_actions[bs], t_env,
+  File "/data/gu-di/RACE/src/components/action_selectors.py", line 83, in select_action
+    picked_actions = GumbelSoftmax(logits=masked_policies).gumbel_softmax_sample()
+  File "/data/gu-di/RACE/src/components/action_selectors.py", line 23, in gumbel_softmax_sample
+    y = self.logits + self.sample_gumbel()
+  File "/data/gu-di/RACE/src/components/action_selectors.py", line 18, in sample_gumbel
+    return -th.log(-th.log(U + self.eps) + self.eps)
+KeyboardInterrupt

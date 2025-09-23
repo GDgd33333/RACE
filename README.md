@@ -1,25 +1,26 @@
-myself:
+# myself:
   source /data/gu-di/miniconda3/etc/profile.d/conda.sh
   conda activate race
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/data/gu-di/.mujoco/mujoco200/bin
   cd RACE/
 
 
-smac环境：
+# smac环境：
   ```
   python3  src/main.py --config=facmac_smac --env-config=sc2 with env_args.map_name=3s_vs_3z  batch_size_run=1 state_alpha=0.001 frac=0.005  EA_alpha=1.0  Org_alpha=1.0  EA=1  EA_freq=1 SAME=0  use_cuda=False t_max=2005000
   ```
   python3  src/main.py --config=facmac_smac --env-config=sc2 with env_args.map_name=MMM  batch_size_run=1 state_alpha=0.001 frac=0.005  EA_alpha=1.0  Org_alpha=1.0  EA=1  EA_freq=1 SAME=0  use_cuda=False t_max=2005000
 
-救火环境：
-  python3 src/main.py --config=facmac_smac --env-config=firefighters with batch_size_run=1 state_alpha=0.001 frac=0.005  EA_alpha=1.0  Org_alpha=1.0  EA=1  EA_freq=1 SAME=0  use_cuda=True t_max=15000000           
+# 救火环境：
+python3 src/main.py --config=facmac_smac --env-config=firefighters with batch_size_run=1 state_alpha=0.001 frac=0.005  EA_alpha=1.0  Org_alpha=1.0  EA=1  EA_freq=1 SAME=0  use_cuda=True t_max=15000000           
 
-  #创建一个新的 tmux 会话，叫做 train 
-  tmux new -s train   
-  # 然后在 tmux 中运行：
-  python3 src/main.py --config=facmac_smac --env-config=firefighters with batch_size_run=1 state_alpha=0.001 frac=0.005 EA_alpha=1.0 Org_alpha=1.0 EA=1 EA_freq=1 SAME=0 use_cuda=False t_max=15000000 2>&1 | tee train.log  
 
-使用 tmux（或 nohup）的最大优势:
+# 创建一个新的 tmux 会话，叫做 train 
+tmux new -s train   
+# 然后在 tmux 中运行：
+  python3 src/main.py --config=facmac_smac --env-config=firefighters with batch_size_run=1 state_alpha=0.001 frac=0.005 EA_alpha=1.0 Org_alpha=1.0 EA=1 EA_freq=1 SAME=0 use_cuda=False save_model=True t_max=15000000 2>&1 | tee fire.log  
+
+# 使用 tmux（或 nohup）的最大优势:
     程序运行与终端断开无关
       ✅ 即使你关闭 VSCode 的终端窗口
       ✅ 或者你断开 SSH 连接 / 网络掉线
@@ -27,9 +28,19 @@ smac环境：
       ✅ 服务器重启前你都没操作错
       🚀只要服务器还在运行、tmux 会话还在，里面的程序就会继续运行
 
-如果不小心关掉了：
+# 如果不小心关掉了：
   tmux ls   #查看有哪些会话
   tmux attach -t train  # 重新进入会话，train 是会话名
+
+
+# 开 TensorBoard 会话
+# 1. 新开一个 tmux 会话 (叫 tbff)
+tmux new -s tbff
+
+# 2. 在会话里启动 TensorBoard
+cd ~/RACE/src
+tensorboard --logdir /data/gu-di/RACE/results/tb_logs --port 6006 --host 127.0.0.1
+
 
 
 

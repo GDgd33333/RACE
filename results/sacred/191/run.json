@@ -1,0 +1,122 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/data/gu-di/RACE/src",
+    "dependencies": [
+      "munch==2.5.0",
+      "numpy==1.24.4",
+      "PyYAML==3.13",
+      "sacred==0.8.2",
+      "torch==2.4.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_1a3218c1bd878555b114c21d474a9b66.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_9d8732b605e10ccde1fb30445036005b.py"
+      ],
+      [
+        "utils/__init__.py",
+        "_sources/__init___d41d8cd98f00b204e9800998ecf8427e.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_a5a84fc83fc1dd6973924f225876e5c4.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/data/gu-di/RACE/src/main.py\", line 81, in my_main\n    run(_run, config, _log)\n",
+    "  File \"/data/gu-di/RACE/src/run.py\", line 58, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"/data/gu-di/RACE/src/run.py\", line 509, in run_sequential\n    _, ea_tp_reward, tp_win = runner.run(pop[np.argmax(fitness)], test_mode=True, learner=learner)\n",
+    "  File \"/data/gu-di/RACE/src/runners/episode_runner.py\", line 80, in run\n    actions = self.mac.select_actions(self.batch, t_ep=self.t, t_env=self.t_env,\n",
+    "  File \"/data/gu-di/RACE/src/controllers/EA_basic_controller.py\", line 164, in select_actions\n    agent_outputs = self.forward(ep_batch, t_ep, return_logits=(not test_mode))\n",
+    "  File \"/data/gu-di/RACE/src/controllers/EA_basic_controller.py\", line 193, in forward\n    agent_outs.append(self.agent_W[0](agent_inputs[:,i,:], hh[:,i,:]).unsqueeze(1))\n",
+    "  File \"/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/nn/modules/module.py\", line 1553, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n",
+    "  File \"/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/nn/modules/module.py\", line 1562, in _call_impl\n    return forward_call(*args, **kwargs)\n",
+    "  File \"/data/gu-di/RACE/src/modules/agents/EA_qmix_agent.py\", line 158, in forward\n    q = self.fc2(shared_state_embedding)\n",
+    "  File \"/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/nn/modules/module.py\", line 1553, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n",
+    "  File \"/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/nn/modules/module.py\", line 1562, in _call_impl\n    return forward_call(*args, **kwargs)\n",
+    "  File \"/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/nn/modules/linear.py\", line 117, in forward\n    return F.linear(input, self.weight, self.bias)\n",
+    "RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)\n"
+  ],
+  "heartbeat": "2025-09-18T08:10:16.840679",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Platinum 8490H",
+    "gpus": {
+      "driver_version": "560.35.03",
+      "gpus": [
+        {
+          "model": "NVIDIA RTX A6000",
+          "persistence_mode": false,
+          "total_memory": 49140
+        },
+        {
+          "model": "NVIDIA RTX A6000",
+          "persistence_mode": false,
+          "total_memory": 49140
+        }
+      ]
+    },
+    "hostname": "sal1202-PowerEdge-R960",
+    "os": [
+      "Linux",
+      "Linux-6.8.0-78-generic-x86_64-with-glibc2.17"
+    ],
+    "python_version": "3.8.20"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "batch_size_run=1",
+        "state_alpha=0.001",
+        "frac=0.005",
+        "EA_alpha=1.0",
+        "Org_alpha=1.0",
+        "EA=1",
+        "EA_freq=1",
+        "SAME=0",
+        "use_cuda=True",
+        "t_max=15000000"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2025-09-18T08:10:10.269259",
+  "status": "FAILED",
+  "stop_time": "2025-09-18T08:10:16.842956"
+}

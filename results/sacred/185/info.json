@@ -1,0 +1,156 @@
+{
+  "buildings_burned_mean": [
+    2.0
+  ],
+  "buildings_burned_mean_T": [
+    38
+  ],
+  "buildings_completed_mean": [
+    0.0
+  ],
+  "buildings_completed_mean_T": [
+    38
+  ],
+  "buildings_health_delta_mean": [
+    -0.6494905014950045
+  ],
+  "buildings_health_delta_mean_T": [
+    38
+  ],
+  "ep_length_mean": [
+    38.0
+  ],
+  "ep_length_mean_T": [
+    38
+  ],
+  "epsilon": [
+    0.5
+  ],
+  "epsilon_T": [
+    38
+  ],
+  "fires_extinguished_mean": [
+    0.0
+  ],
+  "fires_extinguished_mean_T": [
+    38
+  ],
+  "prop_buildings_completed_mean": [
+    0.0
+  ],
+  "prop_buildings_completed_mean_T": [
+    38
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -13.674972063220606
+    }
+  ],
+  "return_mean_T": [
+    38
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "return_std_T": [
+    38
+  ],
+  "solved_mean": [
+    0.0
+  ],
+  "solved_mean_T": [
+    38
+  ],
+  "tasks_changed_mean": [
+    1.0
+  ],
+  "tasks_changed_mean_T": [
+    38
+  ],
+  "test_buildings_burned_mean": [
+    4.9375
+  ],
+  "test_buildings_burned_mean_T": [
+    38
+  ],
+  "test_buildings_completed_mean": [
+    0.0
+  ],
+  "test_buildings_completed_mean_T": [
+    38
+  ],
+  "test_buildings_health_delta_mean": [
+    -2.3447690120833067
+  ],
+  "test_buildings_health_delta_mean_T": [
+    38
+  ],
+  "test_ep_length_mean": [
+    80.0
+  ],
+  "test_ep_length_mean_T": [
+    38
+  ],
+  "test_episode_limit_mean": [
+    0.03125
+  ],
+  "test_episode_limit_mean_T": [
+    38
+  ],
+  "test_fires_extinguished_mean": [
+    0.125
+  ],
+  "test_fires_extinguished_mean_T": [
+    38
+  ],
+  "test_prop_buildings_completed_mean": [
+    0.0
+  ],
+  "test_prop_buildings_completed_mean_T": [
+    38
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -35.92211474142146
+    }
+  ],
+  "test_return_mean_T": [
+    38
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 14.703039307877333
+    }
+  ],
+  "test_return_std_T": [
+    38
+  ],
+  "test_solved_mean": [
+    0.0
+  ],
+  "test_solved_mean_T": [
+    38
+  ],
+  "test_tasks_changed_mean": [
+    0.96875
+  ],
+  "test_tasks_changed_mean_T": [
+    38
+  ],
+  "test_types_per_firefight_mean": [
+    0.2578125
+  ],
+  "test_types_per_firefight_mean_T": [
+    38
+  ]
+}

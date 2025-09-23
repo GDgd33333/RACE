@@ -1,0 +1,345 @@
+{
+  "buildings_burned_mean": [
+    3.0,
+    5.375
+  ],
+  "buildings_burned_mean_T": [
+    64,
+    2110
+  ],
+  "buildings_completed_mean": [
+    0.0,
+    0.08333333333333333
+  ],
+  "buildings_completed_mean_T": [
+    64,
+    2110
+  ],
+  "buildings_health_delta_mean": [
+    -1.311344767723423,
+    -2.6038904807371255
+  ],
+  "buildings_health_delta_mean_T": [
+    64,
+    2110
+  ],
+  "critic_grad_norm": [
+    {
+      "py/reduce": [
+        {
+          "py/function": "torch._utils._rebuild_tensor_v2"
+        },
+        {
+          "py/tuple": [
+            {
+              "py/reduce": [
+                {
+                  "py/function": "torch.storage._load_from_bytes"
+                },
+                {
+                  "py/tuple": [
+                    {
+                      "py/b64": "gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAAAGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAAaW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3JhZ2UKcQFYCQAAADgzNjIzNDA4MHECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYCQAAADgzNjIzNDA4MHEBYS4BAAAAAAAAAIw2qUA="
+                    }
+                  ]
+                }
+              ]
+            },
+            0,
+            {
+              "py/tuple": []
+            },
+            {
+              "py/tuple": []
+            },
+            false,
+            {
+              "py/reduce": [
+                {
+                  "py/type": "collections.OrderedDict"
+                },
+                {
+                  "py/tuple": []
+                },
+                null,
+                null,
+                {
+                  "py/tuple": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "critic_grad_norm_T": [
+    2662
+  ],
+  "critic_loss": [
+    10.788007736206055
+  ],
+  "critic_loss_T": [
+    2662
+  ],
+  "ep_length_mean": [
+    64.0,
+    85.25
+  ],
+  "ep_length_mean_T": [
+    64,
+    2110
+  ],
+  "episode": [
+    24
+  ],
+  "episode_T": [
+    2025
+  ],
+  "epsilon": [
+    0.5,
+    0.481775
+  ],
+  "epsilon_T": [
+    64,
+    2110
+  ],
+  "fires_extinguished_mean": [
+    0.0,
+    0.041666666666666664
+  ],
+  "fires_extinguished_mean_T": [
+    64,
+    2110
+  ],
+  "prop_buildings_completed_mean": [
+    0.0,
+    0.011160714285714286
+  ],
+  "prop_buildings_completed_mean_T": [
+    64,
+    2110
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -21.50395519918654
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -39.24551121785427
+    }
+  ],
+  "return_mean_T": [
+    64,
+    2110
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 13.908678032877441
+    }
+  ],
+  "return_std_T": [
+    64,
+    2110
+  ],
+  "solved_mean": [
+    0.0,
+    0.0
+  ],
+  "solved_mean_T": [
+    64,
+    2110
+  ],
+  "target_mean": [
+    -0.32161230578805877
+  ],
+  "target_mean_T": [
+    2662
+  ],
+  "tasks_changed_mean": [
+    1.0,
+    1.0
+  ],
+  "tasks_changed_mean_T": [
+    64,
+    2110
+  ],
+  "td_error_abs": [
+    2.168557548952855
+  ],
+  "td_error_abs_T": [
+    2662
+  ],
+  "test_buildings_burned_mean": [
+    5.15625,
+    4.5,
+    4.4375
+  ],
+  "test_buildings_burned_mean_T": [
+    64,
+    64,
+    64
+  ],
+  "test_buildings_completed_mean": [
+    0.25,
+    0.0,
+    0.34375
+  ],
+  "test_buildings_completed_mean_T": [
+    64,
+    64,
+    64
+  ],
+  "test_buildings_health_delta_mean": [
+    -2.4925897508336137,
+    -2.19764710028288,
+    -2.0179223377801665
+  ],
+  "test_buildings_health_delta_mean_T": [
+    64,
+    64,
+    64
+  ],
+  "test_ep_length_mean": [
+    80.8125,
+    93.1875,
+    80.28125
+  ],
+  "test_ep_length_mean_T": [
+    64,
+    64,
+    64
+  ],
+  "test_episode_limit_mean": [
+    0.1875
+  ],
+  "test_episode_limit_mean_T": [
+    64
+  ],
+  "test_fires_extinguished_mean": [
+    0.0,
+    1.09375,
+    0.0
+  ],
+  "test_fires_extinguished_mean_T": [
+    64,
+    64,
+    64
+  ],
+  "test_prop_buildings_completed_mean": [
+    0.03936011904761905,
+    0.0,
+    0.06361607142857142
+  ],
+  "test_prop_buildings_completed_mean_T": [
+    64,
+    64,
+    64
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -37.58849926715766
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -32.77341058906728
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -31.93690393464753
+    }
+  ],
+  "test_return_mean_T": [
+    64,
+    64,
+    64
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 14.312105802549226
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 16.60362125046104
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 12.971892185936163
+    }
+  ],
+  "test_return_std_T": [
+    64,
+    64,
+    64
+  ],
+  "test_solved_mean": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "test_solved_mean_T": [
+    64,
+    64,
+    64
+  ],
+  "test_tasks_changed_mean": [
+    1.0,
+    0.8125,
+    1.0
+  ],
+  "test_tasks_changed_mean_T": [
+    64,
+    64,
+    64
+  ],
+  "test_types_per_build_mean": [
+    0.5625,
+    0.0625,
+    0.696030895134653
+  ],
+  "test_types_per_build_mean_T": [
+    64,
+    64,
+    64
+  ],
+  "test_types_per_firefight_mean": [
+    0.34375
+  ],
+  "test_types_per_firefight_mean_T": [
+    64
+  ],
+  "types_per_build_mean": [
+    1.0,
+    0.625
+  ],
+  "types_per_build_mean_T": [
+    64,
+    2110
+  ],
+  "types_per_firefight_mean": [
+    1.0,
+    0.6772486772486772
+  ],
+  "types_per_firefight_mean_T": [
+    64,
+    2110
+  ]
+}

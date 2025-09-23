@@ -1,0 +1,121 @@
+[INFO] Logging to: src/runs/facmac_smac_20250918_155519/log.txt
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+{'entity_shape': 58, 'n_actions': 12, 'n_agents': 8, 'n_entities': 16, 'episode_limit': 150, 'n_tasks': 8, 'state_shape': 608, 'obs_shape': 76}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+===================================================================================
+pop: [<controllers.EA_basic_controller.Gen_BasicMAC object at 0x78332ffffd90>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x78332fe88430>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x78332fe88bb0>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x78332fe88fa0>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x78332fe543d0>]
+===================================================================================
+/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/_compile.py:31: UserWarning: optimizer contains a parameter group with duplicate parameters; in future, this will cause an error; see github.com/pytorch/pytorch/issues/40967 for more information
+  return disable_fn(*args, **kwargs)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /opt/conda/conda-bld/pytorch_1724789259345/work/torch/csrc/utils/tensor_new.cpp:278.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+RL eval  -37.588499267157665 0.0
+EA eval  -32.77341058906728 0.0
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 438, in run_sequential
+    learner.train(episode_sample, all_teams, runner.t_env, episode)
+  File "/data/gu-di/RACE/src/learners/EA_facmac_learner_discrete.py", line 284, in train
+    target_act_outs = self.target_mac.select_actions(batch, t_ep=t, t_env=t_env, test_mode=True)
+  File "/data/gu-di/RACE/src/controllers/EA_basic_controller.py", line 23, in select_actions
+    agent_outputs = self.forward(ep_batch, t_ep, return_logits=(not test_mode))
+  File "/data/gu-di/RACE/src/controllers/EA_basic_controller.py", line 51, in forward
+    agent_outs[reshaped_avail_actions == 0] = -1e10
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+BrokenPipeError: [Errno 32] Broken pipe
+Call stack:
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 248, in __call__
+    self._stop_heartbeat()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 284, in _stop_heartbeat
+    self.run_logger.debug("Stopping Heartbeat")
+Message: 'Stopping Heartbeat'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 438, in run_sequential
+    learner.train(episode_sample, all_teams, runner.t_env, episode)
+  File "/data/gu-di/RACE/src/learners/EA_facmac_learner_discrete.py", line 284, in train
+    target_act_outs = self.target_mac.select_actions(batch, t_ep=t, t_env=t_env, test_mode=True)
+  File "/data/gu-di/RACE/src/controllers/EA_basic_controller.py", line 23, in select_actions
+    agent_outputs = self.forward(ep_batch, t_ep, return_logits=(not test_mode))
+  File "/data/gu-di/RACE/src/controllers/EA_basic_controller.py", line 51, in forward
+    agent_outs[reshaped_avail_actions == 0] = -1e10
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+BrokenPipeError: [Errno 32] Broken pipe
+Call stack:
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 250, in __call__
+    self._emit_interrupted(status)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 380, in _emit_interrupted
+    self.run_logger.warning("Aborted after %s!", elapsed_time)
+Message: 'Aborted after %s!'
+Arguments: (datetime.timedelta(seconds=18),)
+Traceback (most recent call last):
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 438, in run_sequential
+    learner.train(episode_sample, all_teams, runner.t_env, episode)
+  File "/data/gu-di/RACE/src/learners/EA_facmac_learner_discrete.py", line 284, in train
+    target_act_outs = self.target_mac.select_actions(batch, t_ep=t, t_env=t_env, test_mode=True)
+  File "/data/gu-di/RACE/src/controllers/EA_basic_controller.py", line 23, in select_actions
+    agent_outputs = self.forward(ep_batch, t_ep, return_logits=(not test_mode))
+  File "/data/gu-di/RACE/src/controllers/EA_basic_controller.py", line 51, in forward
+    agent_outs[reshaped_avail_actions == 0] = -1e10
+KeyboardInterrupt

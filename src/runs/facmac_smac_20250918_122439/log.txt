@@ -1,0 +1,55 @@
+[INFO] Logging to: src/runs/facmac_smac_20250918_122439/log.txt
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+{'entity_shape': 58, 'n_actions': 12, 'n_agents': 8, 'n_entities': 16, 'episode_limit': 150, 'n_tasks': 8, 'state_shape': 608, 'obs_shape': 76}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+===================================================================================
+pop: [<controllers.EA_basic_controller.Gen_BasicMAC object at 0x7cccd1ec9220>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7cccd1b99b50>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7cccd1bbe310>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7cccd1bbe700>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7cccd1bbeaf0>]
+===================================================================================
+/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/_compile.py:31: UserWarning: optimizer contains a parameter group with duplicate parameters; in future, this will cause an error; see github.com/pytorch/pytorch/issues/40967 for more information
+  return disable_fn(*args, **kwargs)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+RL eval  -32.164840203150966 0.0
+EA eval  -35.09104081191427 0.0
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 438, in run_sequential
+    learner.train(episode_sample, all_teams, runner.t_env, episode)
+  File "/data/gu-di/RACE/src/learners/EA_facmac_learner_discrete.py", line 235, in train
+    param = nn.utils.parameters_to_vector(list(selected_team.agent_W[i].parameters())).data.cpu().numpy()
+RuntimeError: Numpy is not available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 347, in run_commandline
+    print_filtered_stacktrace()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/utils.py", line 493, in print_filtered_stacktrace
+    print(format_filtered_stacktrace(filter_traceback), file=sys.stderr)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/utils.py", line 528, in format_filtered_stacktrace
+    return "".join(filtered_traceback_format(tb_exception))
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/utils.py", line 568, in filtered_traceback_format
+    current_tb = tb_exception.exc_traceback
+AttributeError: 'TracebackException' object has no attribute 'exc_traceback'
+buildings_burned_mean:     3.5400	buildings_completed_mean:  0.0200	buildings_health_delta_mean: -1.7684	ep_length_mean:           50.2400
+epsilon:                   0.4824	fires_extinguished_mean:   0.0000	prop_buildings_completed_mean:  0.0067	return_mean:             -26.0189
+return_std:                7.5854	solved_mean:               0.0000	tasks_changed_mean:        1.0000	test_buildings_burned_mean:  4.7396
+test_buildings_completed_mean:  0.1042	test_buildings_health_delta_mean: -2.2806	test_ep_length_mean:      74.9167	test_fires_extinguished_mean:  0.0104
+test_prop_buildings_completed_mean:  0.0161	test_return_mean:        -34.5553	test_return_std:          14.8425	test_solved_mean:          0.0000
+test_tasks_changed_mean:   1.0000	test_types_per_build_mean:  0.4568	test_types_per_firefight_mean:  0.1663	types_per_build_mean:      0.6600
+types_per_firefight_mean:  0.7800	
+[DEBUG 12:24:53] pymarl Stopping Heartbeat
+[ERROR 12:24:53] pymarl Failed after 0:00:14!

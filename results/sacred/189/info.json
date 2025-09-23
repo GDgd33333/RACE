@@ -1,0 +1,295 @@
+{
+  "buildings_burned_mean": [
+    2.0,
+    4.730769230769231
+  ],
+  "buildings_burned_mean_T": [
+    36,
+    2127
+  ],
+  "buildings_completed_mean": [
+    0.0,
+    0.038461538461538464
+  ],
+  "buildings_completed_mean_T": [
+    36,
+    2127
+  ],
+  "buildings_health_delta_mean": [
+    -1.001429913100733,
+    -2.486151161754274
+  ],
+  "buildings_health_delta_mean_T": [
+    36,
+    2127
+  ],
+  "critic_grad_norm": [
+    {
+      "py/reduce": [
+        {
+          "py/function": "torch._utils._rebuild_tensor_v2"
+        },
+        {
+          "py/tuple": [
+            {
+              "py/reduce": [
+                {
+                  "py/function": "torch.storage._load_from_bytes"
+                },
+                {
+                  "py/tuple": [
+                    {
+                      "py/b64": "gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAAAGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAAaW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3JhZ2UKcQFYCgAAADEyMzI4OTQ0MTZxAlgGAAAAY3VkYTowcQNLAU50cQRRLoACXXEAWAoAAAAxMjMyODk0NDE2cQFhLgEAAAAAAAAAd0a7QQ=="
+                    }
+                  ]
+                }
+              ]
+            },
+            0,
+            {
+              "py/tuple": []
+            },
+            {
+              "py/tuple": []
+            },
+            false,
+            {
+              "py/reduce": [
+                {
+                  "py/type": "collections.OrderedDict"
+                },
+                {
+                  "py/tuple": []
+                },
+                null,
+                null,
+                {
+                  "py/tuple": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "critic_grad_norm_T": [
+    2517
+  ],
+  "critic_loss": [
+    9.754217147827148
+  ],
+  "critic_loss_T": [
+    2517
+  ],
+  "ep_length_mean": [
+    36.0,
+    80.42307692307692
+  ],
+  "ep_length_mean_T": [
+    36,
+    2127
+  ],
+  "episode": [
+    26
+  ],
+  "episode_T": [
+    2031
+  ],
+  "epsilon": [
+    0.5,
+    0.481721
+  ],
+  "epsilon_T": [
+    36,
+    2127
+  ],
+  "fires_extinguished_mean": [
+    0.0,
+    0.038461538461538464
+  ],
+  "fires_extinguished_mean_T": [
+    36,
+    2127
+  ],
+  "prop_buildings_completed_mean": [
+    0.0,
+    0.005494505494505494
+  ],
+  "prop_buildings_completed_mean_T": [
+    36,
+    2127
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -14.71008797970803
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -35.12329527212793
+    }
+  ],
+  "return_mean_T": [
+    36,
+    2127
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 16.111743047298525
+    }
+  ],
+  "return_std_T": [
+    36,
+    2127
+  ],
+  "solved_mean": [
+    0.0,
+    0.0
+  ],
+  "solved_mean_T": [
+    36,
+    2127
+  ],
+  "target_mean": [
+    -0.2642135529182807
+  ],
+  "target_mean_T": [
+    2517
+  ],
+  "tasks_changed_mean": [
+    1.0,
+    1.0
+  ],
+  "tasks_changed_mean_T": [
+    36,
+    2127
+  ],
+  "td_error_abs": [
+    2.118232348157529
+  ],
+  "td_error_abs_T": [
+    2517
+  ],
+  "test_buildings_burned_mean": [
+    4.5625,
+    5.15625
+  ],
+  "test_buildings_burned_mean_T": [
+    36,
+    36
+  ],
+  "test_buildings_completed_mean": [
+    0.0,
+    0.0
+  ],
+  "test_buildings_completed_mean_T": [
+    36,
+    36
+  ],
+  "test_buildings_health_delta_mean": [
+    -2.328945728716233,
+    -2.5764444319577153
+  ],
+  "test_buildings_health_delta_mean_T": [
+    36,
+    36
+  ],
+  "test_ep_length_mean": [
+    77.3125,
+    87.3125
+  ],
+  "test_ep_length_mean_T": [
+    36,
+    36
+  ],
+  "test_fires_extinguished_mean": [
+    0.0,
+    0.0
+  ],
+  "test_fires_extinguished_mean_T": [
+    36,
+    36
+  ],
+  "test_prop_buildings_completed_mean": [
+    0.0,
+    0.0
+  ],
+  "test_prop_buildings_completed_mean_T": [
+    36,
+    36
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -33.68807567269477
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -37.90866009399325
+    }
+  ],
+  "test_return_mean_T": [
+    36,
+    36
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 13.3351561585608
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 13.146138442220185
+    }
+  ],
+  "test_return_std_T": [
+    36,
+    36
+  ],
+  "test_solved_mean": [
+    0.0,
+    0.0
+  ],
+  "test_solved_mean_T": [
+    36,
+    36
+  ],
+  "test_tasks_changed_mean": [
+    1.0,
+    1.0
+  ],
+  "test_tasks_changed_mean_T": [
+    36,
+    36
+  ],
+  "types_per_build_mean": [
+    1.0,
+    0.5
+  ],
+  "types_per_build_mean_T": [
+    36,
+    2127
+  ],
+  "types_per_firefight_mean": [
+    1.0,
+    0.5
+  ],
+  "types_per_firefight_mean_T": [
+    36,
+    2127
+  ]
+}

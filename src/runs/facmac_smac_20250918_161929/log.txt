@@ -1,0 +1,63 @@
+[INFO] Logging to: src/runs/facmac_smac_20250918_161929/log.txt
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+{'entity_shape': 58, 'n_actions': 12, 'n_agents': 8, 'n_entities': 16, 'episode_limit': 150, 'n_tasks': 8, 'state_shape': 608, 'obs_shape': 76}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+===================================================================================
+pop: [<controllers.EA_basic_controller.Gen_BasicMAC object at 0x7740e54ff340>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7740e51474c0>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7740e5147c40>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7740e5113070>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7740e5113460>]
+===================================================================================
+/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/_compile.py:31: UserWarning: optimizer contains a parameter group with duplicate parameters; in future, this will cause an error; see github.com/pytorch/pytorch/issues/40967 for more information
+  return disable_fn(*args, **kwargs)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /opt/conda/conda-bld/pytorch_1724789259345/work/torch/csrc/utils/tensor_new.cpp:278.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+RL eval  -29.109651079906673 0.0
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 509, in run_sequential
+    _, ea_tp_reward, tp_win = runner.run(pop[np.argmax(fitness)], test_mode=True, learner=learner)
+  File "/data/gu-di/RACE/src/runners/episode_runner.py", line 80, in run
+    actions = self.mac.select_actions(self.batch, t_ep=self.t, t_env=self.t_env,
+  File "/data/gu-di/RACE/src/controllers/EA_basic_controller.py", line 164, in select_actions
+    agent_outputs = self.forward(ep_batch, t_ep, return_logits=(not test_mode))
+  File "/data/gu-di/RACE/src/controllers/EA_basic_controller.py", line 193, in forward
+    agent_outs.append(self.agent_W[0](agent_inputs[:,i,:], hh[:,i,:]).unsqueeze(1))
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/gu-di/RACE/src/modules/agents/EA_qmix_agent.py", line 158, in forward
+    q = self.fc2(shared_state_embedding)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 347, in run_commandline
+    print_filtered_stacktrace()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/utils.py", line 493, in print_filtered_stacktrace
+    print(format_filtered_stacktrace(filter_traceback), file=sys.stderr)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/utils.py", line 528, in format_filtered_stacktrace
+    return "".join(filtered_traceback_format(tb_exception))
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/utils.py", line 568, in filtered_traceback_format
+    current_tb = tb_exception.exc_traceback
+AttributeError: 'TracebackException' object has no attribute 'exc_traceback'

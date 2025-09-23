@@ -20,7 +20,7 @@ from components.episode_buffer import ReplayBuffer
 from components.transforms import OneHot
 from ea import mod_neuro_evo as utils_ne
 
-# rl_to_evo 实现 将RL智能体的策略网络参数复制到EA个体的对应网络，完成从强化学习到进化算法的策略知识迁移。
+# rl_to_evo : 实现将 RL智能体的策略网络参数 复制到 EA个体的对应网络，完成从强化学习到进化算法的策略知识迁移。
 def rl_to_evo(rl_agent, evo_net, index):
     # 遍历RL智能体和EA个体中第index个智能体的策略网络参数
     for target_param, param in zip(evo_net.agent_W[index].parameters(), rl_agent.agent_W[index].parameters()):
@@ -239,7 +239,7 @@ def run_sequential(args, logger):
             elif actions.is_cuda:
                 return args.actions2unit_coef * actions + args.actions_min
             else:
-                return args.args.actions2unit_coef_cpu * actions + args.actions_min_cpu
+                return args.actions2unit_coef_cpu * actions + args.actions_min_cpu
 
         def actions_from_unit_box(actions):
             # 将动作从[0,1]单位空间转换回原始空间
@@ -367,7 +367,7 @@ def run_sequential(args, logger):
     last_log_T = 0  # 上次记录日志的时间步
     model_save_time = 0  # 上次保存模型的时间步
 
-    start_time = time.time()  # 训练开始时间
+    start_time = time.time()  
     last_time = start_time  # 用于计算剩余时间
 
     logger.console_logger.info("Beginning training for {} timesteps".format(args.t_max))

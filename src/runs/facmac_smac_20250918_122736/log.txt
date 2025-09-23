@@ -1,0 +1,61 @@
+[INFO] Logging to: src/runs/facmac_smac_20250918_122736/log.txt
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+{'entity_shape': 58, 'n_actions': 12, 'n_agents': 8, 'n_entities': 16, 'episode_limit': 150, 'n_tasks': 8, 'state_shape': 608, 'obs_shape': 76}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+===================================================================================
+pop: [<controllers.EA_basic_controller.Gen_BasicMAC object at 0x7190c8bbe340>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7190c8a47490>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7190c8a47c10>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7190c87d4040>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x7190c87d4430>]
+===================================================================================
+/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/_compile.py:31: UserWarning: optimizer contains a parameter group with duplicate parameters; in future, this will cause an error; see github.com/pytorch/pytorch/issues/40967 for more information
+  return disable_fn(*args, **kwargs)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /opt/conda/conda-bld/pytorch_1724789259345/work/torch/csrc/utils/tensor_new.cpp:278.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+RL eval  -33.15038811564434 0.0
+EA eval  -36.07304046916101 0.0
+Traceback (most recent call last):
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 409, in run_sequential
+    episode_batch, _, _ = runner.run(mac, test_mode=False, EA=False, learner=learner)
+  File "/data/gu-di/RACE/src/runners/episode_runner.py", line 72, in run
+    self.batch.update(pre_transition_data, ts=self.t)
+  File "/data/gu-di/RACE/src/components/episode_buffer.py", line 97, in update
+    target["filled"][slices] = 1
+KeyboardInterrupt
+ '--show-toplevel'], cwd=/data/gu-di/RACE, universal_newlines=False, shell=None, istream=None)
+[DEBUG 12:27:37] wandb no default config file found in config-defaults.yaml
+[INFO 12:27:39] my_main Beginning training for 15000000 timesteps
+[INFO 12:27:39] my_main t_env: 47 / 15000000
+[INFO 12:27:39] my_main Estimated time left: 1 minutes, 18 seconds. Time passed: 0 seconds
+[INFO 12:27:49] my_main Recent Stats | t_env:       2031 | Episode:       24
+buildings_burned_mean:     3.0000	buildings_completed_mean:  0.0000	buildings_health_delta_mean: -0.9721	ep_length_mean:           47.0000
+epsilon:                   0.5000	fires_extinguished_mean:   0.0000	prop_buildings_completed_mean:  0.0000	return_mean:             -20.5062
+return_std:                0.0000	solved_mean:               0.0000	tasks_changed_mean:        1.0000	test_buildings_burned_mean:  4.8750
+test_buildings_completed_mean:  0.0625	test_buildings_health_delta_mean: -2.4342	test_ep_length_mean:      80.1979	test_episode_limit_mean:   0.0469
+test_fires_extinguished_mean:  0.3125	test_prop_buildings_completed_mean:  0.0138	test_return_mean:        -35.7715	test_return_std:          15.8795
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.9688	test_types_per_build_mean:  0.2151	test_types_per_firefight_mean:  0.4308
+types_per_firefight_mean:  1.0000	
+[INFO 12:28:17] my_main Recent Stats | t_env:       4055 | Episode:       49
+buildings_burned_mean:     4.3333	buildings_completed_mean:  0.0208	buildings_health_delta_mean: -1.9669	critic_grad_norm:          4.8637
+critic_loss:              10.9552	ep_length_mean:           66.2917	epsilon:                   0.4817	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0052	return_mean:             -31.2692	return_std:                6.6675	solved_mean:               0.0000
+target_mean:              -0.2551	tasks_changed_mean:        1.0000	td_error_abs:              2.1726	test_buildings_burned_mean:  4.8750
+test_buildings_completed_mean:  0.0625	test_buildings_health_delta_mean: -2.4342	test_ep_length_mean:      80.1979	test_episode_limit_mean:   0.0469
+test_fires_extinguished_mean:  0.3125	test_prop_buildings_completed_mean:  0.0138	test_return_mean:        -35.7715	test_return_std:          15.8795
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.9688	test_types_per_build_mean:  0.2151	test_types_per_firefight_mean:  0.4308
+types_per_build_mean:      0.7083	types_per_firefight_mean:  0.8333	
+[DEBUG 12:28:19] pymarl Stopping Heartbeat
+[WARNING 12:28:19] pymarl Aborted after 0:00:42!

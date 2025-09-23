@@ -1,0 +1,91 @@
+[INFO] Logging to: src/runs/facmac_smac_20250918_161319/log.txt
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+{'entity_shape': 58, 'n_actions': 12, 'n_agents': 8, 'n_entities': 16, 'episode_limit': 150, 'n_tasks': 8, 'state_shape': 608, 'obs_shape': 76}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /opt/conda/conda-bld/pytorch_1724789259345/work/torch/csrc/utils/tensor_new.cpp:278.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+RL eval  -37.85808943842236 0.0
+EA eval  0 0.0
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 409, in run_sequential
+    episode_batch, _, _ = runner.run(mac, test_mode=False, EA=False, learner=learner)
+  File "/data/gu-di/RACE/src/runners/episode_runner.py", line 72, in run
+    self.batch.update(pre_transition_data, ts=self.t)
+  File "/data/gu-di/RACE/src/components/episode_buffer.py", line 108, in update
+    v = th.tensor(v, dtype=dtype, device=self.device)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+BrokenPipeError: [Errno 32] Broken pipe
+Call stack:
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 250, in __call__
+    self._emit_interrupted(status)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 380, in _emit_interrupted
+    self.run_logger.warning("Aborted after %s!", elapsed_time)
+Message: 'Aborted after %s!'
+Arguments: (datetime.timedelta(seconds=46),)
+Traceback (most recent call last):
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 409, in run_sequential
+    episode_batch, _, _ = runner.run(mac, test_mode=False, EA=False, learner=learner)
+  File "/data/gu-di/RACE/src/runners/episode_runner.py", line 72, in run
+    self.batch.update(pre_transition_data, ts=self.t)
+  File "/data/gu-di/RACE/src/components/episode_buffer.py", line 108, in update
+    v = th.tensor(v, dtype=dtype, device=self.device)
+KeyboardInterrupt
+[INFO 16:13:43] my_main Recent Stats | t_env:       4152 | Episode:       52
+buildings_burned_mean:     4.7593	buildings_completed_mean:  0.0185	buildings_health_delta_mean: -2.3894	critic_grad_norm:         26.8161
+critic_loss:               9.5069	ep_length_mean:           80.4630	epsilon:                   0.4813	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0046	return_mean:             -35.0178	return_std:                6.6438	solved_mean:               0.0000
+target_mean:              -0.2642	tasks_changed_mean:        1.0000	td_error_abs:              2.0955	test_buildings_burned_mean:  4.9219
+test_buildings_completed_mean:  0.0000	test_buildings_health_delta_mean: -2.5107	test_ep_length_mean:      78.7500	test_fires_extinguished_mean:  0.0000
+test_prop_buildings_completed_mean:  0.0000	test_return_mean:        -36.3366	test_return_std:          14.0313	test_solved_mean:          0.0000
+test_tasks_changed_mean:   1.0000	test_types_per_build_mean:  0.0312	types_per_build_mean:      0.7407	types_per_firefight_mean:  0.6667
+
+[INFO 16:13:52] my_main Recent Stats | t_env:       6199 | Episode:       76
+buildings_burned_mean:     4.7728	buildings_completed_mean:  0.0657	buildings_health_delta_mean: -2.3352	critic_grad_norm:         14.9349
+critic_loss:               6.7591	ep_length_mean:           81.3220	epsilon:                   0.4626	fires_extinguished_mean:   0.0000
+prop_buildings_completed_mean:  0.0136	return_mean:             -34.9243	return_std:                8.7553	solved_mean:               0.0000
+target_mean:              -0.2582	tasks_changed_mean:        1.0000	td_error_abs:              1.8235	test_buildings_burned_mean:  4.9219
+test_buildings_completed_mean:  0.0000	test_buildings_health_delta_mean: -2.5107	test_ep_length_mean:      78.7500	test_fires_extinguished_mean:  0.0000
+test_prop_buildings_completed_mean:  0.0000	test_return_mean:        -36.3366	test_return_std:          14.0313	test_solved_mean:          0.0000
+test_tasks_changed_mean:   1.0000	test_types_per_build_mean:  0.0312	types_per_build_mean:      0.7083	types_per_firefight_mean:  0.4933
+
+[DEBUG 16:14:06] pymarl Stopping Heartbeat
+[WARNING 16:14:06] pymarl Aborted after 0:00:46!

@@ -1,0 +1,129 @@
+[INFO] Logging to: src/runs/facmac_smac_20250918_123647/log.txt
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+{'entity_shape': 58, 'n_actions': 12, 'n_agents': 8, 'n_entities': 16, 'episode_limit': 150, 'n_tasks': 8, 'state_shape': 608, 'obs_shape': 76}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /opt/conda/conda-bld/pytorch_1724789259345/work/torch/csrc/utils/tensor_new.cpp:278.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+RL eval  -30.194068614220942 0.0
+EA eval  0 0.0
+RL eval  -34.83950714769297 0.0
+EA eval  0 0.0
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 539, in run_sequential
+    runner.run(mac, test_mode=True, learner=learner)
+  File "/data/gu-di/RACE/src/runners/episode_runner.py", line 69, in run
+    "obs": [self.env.get_obs()]
+  File "/data/gu-di/RACE/src/envs/firefighters/firefighters.py", line 1120, in get_obs
+    obs.append(np.array(agent_obs, dtype=np.float32))
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+BrokenPipeError: [Errno 32] Broken pipe
+Call stack:
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 248, in __call__
+    self._stop_heartbeat()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 284, in _stop_heartbeat
+    self.run_logger.debug("Stopping Heartbeat")
+Message: 'Stopping Heartbeat'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 539, in run_sequential
+    runner.run(mac, test_mode=True, learner=learner)
+  File "/data/gu-di/RACE/src/runners/episode_runner.py", line 69, in run
+    "obs": [self.env.get_obs()]
+  File "/data/gu-di/RACE/src/envs/firefighters/firefighters.py", line 1120, in get_obs
+    obs.append(np.array(agent_obs, dtype=np.float32))
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+BrokenPipeError: [Errno 32] Broken pipe
+Call stack:
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 250, in __call__
+    self._emit_interrupted(status)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 380, in _emit_interrupted
+    self.run_logger.warning("Aborted after %s!", elapsed_time)
+Message: 'Aborted after %s!'
+Arguments: (datetime.timedelta(seconds=55),)
+Traceback (most recent call last):
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 539, in run_sequential
+    runner.run(mac, test_mode=True, learner=learner)
+  File "/data/gu-di/RACE/src/runners/episode_runner.py", line 69, in run
+    "obs": [self.env.get_obs()]
+  File "/data/gu-di/RACE/src/envs/firefighters/firefighters.py", line 1120, in get_obs
+    obs.append(np.array(agent_obs, dtype=np.float32))
+KeyboardInterrupt
+2	test_episode_limit_mean:   0.3594
+test_fires_extinguished_mean:  0.5156	test_prop_buildings_completed_mean:  0.0693	test_return_mean:        -28.1981	test_return_std:          12.4820
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.6406	test_types_per_build_mean:  0.5676	test_types_per_firefight_mean:  0.3264
+types_per_build_mean:      0.6857	types_per_firefight_mean:  0.4377	
+[INFO 12:37:26] my_main Recent Stats | t_env:       8191 | Episode:      101
+buildings_burned_mean:     5.1699	buildings_completed_mean:  0.0096	buildings_health_delta_mean: -2.6071	critic_grad_norm:         10.7336
+critic_loss:               5.9608	ep_length_mean:           79.9513	epsilon:                   0.4446	fires_extinguished_mean:   0.0496
+prop_buildings_completed_mean:  0.0032	return_mean:             -38.0687	return_std:               10.3093	solved_mean:               0.0000
+target_mean:              -0.2799	tasks_changed_mean:        1.0000	td_error_abs:              1.6268	test_buildings_burned_mean:  3.9375
+test_buildings_completed_mean:  0.3750	test_buildings_health_delta_mean: -1.7756	test_ep_length_mean:     101.0312	test_episode_limit_mean:   0.3594
+test_fires_extinguished_mean:  0.5156	test_prop_buildings_completed_mean:  0.0693	test_return_mean:        -28.1981	test_return_std:          12.4820
+test_solved_mean:          0.0000	test_tasks_changed_mean:   0.6406	test_types_per_build_mean:  0.5676	test_types_per_firefight_mean:  0.3264
+types_per_build_mean:      0.6142	types_per_firefight_mean:  0.5478	
+[INFO 12:37:35] my_main t_env: 10110 / 15000000
+[INFO 12:37:35] my_main Estimated time left: 18 hours, 28 minutes, 1 seconds. Time passed: 44 seconds
+[DEBUG 12:37:42] pymarl Stopping Heartbeat
+[WARNING 12:37:42] pymarl Aborted after 0:00:55!

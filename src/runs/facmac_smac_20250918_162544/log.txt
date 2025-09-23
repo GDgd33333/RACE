@@ -1,0 +1,71 @@
+[INFO] Logging to: src/runs/facmac_smac_20250918_162544/log.txt
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+{'state_shape': 27, 'obs_shape': 36, 'n_actions': 9, 'n_agents': 3, 'episode_limit': 150, 'agent_features': ['health', 'energy/cooldown', 'rel_x', 'rel_y', 'shield'], 'enemy_features': ['health', 'rel_x', 'rel_y', 'shield']}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+===================================================================================
+pop: [<controllers.EA_basic_controller.Gen_BasicMAC object at 0x740ff4ec0e50>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x740ff4b8c520>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x740ff4b8c8e0>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x740ff4b8caf0>, <controllers.EA_basic_controller.Gen_BasicMAC object at 0x740ff4b8cd00>]
+===================================================================================
+/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/torch/_compile.py:31: UserWarning: optimizer contains a parameter group with duplicate parameters; in future, this will cause an error; see github.com/pytorch/pytorch/issues/40967 for more information
+  return disable_fn(*args, **kwargs)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /opt/conda/conda-bld/pytorch_1724789259345/work/torch/csrc/utils/tensor_new.cpp:278.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+/data/gu-di/RACE/src/components/episode_buffer.py:108: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+Traceback (most recent call last):
+  File "src/main.py", line 169, in <module>
+    ex.run_commandline(params)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 312, in run_commandline
+    return self.run(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/experiment.py", line 276, in run
+    run()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/run.py", line 238, in __call__
+    self.result = self.main_function(*args)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/sacred/config/captured_function.py", line 42, in captured_function
+    result = wrapped(*args, **kwargs)
+  File "src/main.py", line 81, in my_main
+    run(_run, config, _log)
+  File "/data/gu-di/RACE/src/run.py", line 58, in run
+    run_sequential(args=args, logger=logger)
+  File "/data/gu-di/RACE/src/run.py", line 486, in run_sequential
+    _, rl_tp_reward, tp_win = runner.run(mac, test_mode=True, learner=learner)
+  File "/data/gu-di/RACE/src/runners/episode_runner.py", line 97, in run
+    reward, terminated, env_info = self.env.step(actions[0].cpu())
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/smac/env/starcraft2/starcraft2.py", line 481, in step
+    self._obs = self._controller.observe()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/pysc2/lib/remote_controller.py", line 99, in _valid_status
+    return func(self, *args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/pysc2/lib/stopwatch.py", line 212, in _stopwatch
+    return func(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/pysc2/lib/remote_controller.py", line 248, in observe
+    obs = self._client.send(observation=sc_pb.RequestObservation(
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/pysc2/lib/protocol.py", line 151, in send
+    res = self.send_req(req)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/pysc2/lib/protocol.py", line 131, in send_req
+    return self.read()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/pysc2/lib/stopwatch.py", line 212, in _stopwatch
+    return func(*args, **kwargs)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/pysc2/lib/protocol.py", line 102, in read
+    response = self._read()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/pysc2/lib/protocol.py", line 183, in _read
+    response_str = self._sock.recv()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/websocket/_core.py", line 362, in recv
+    opcode, data = self.recv_data()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/websocket/_core.py", line 385, in recv_data
+    opcode, frame = self.recv_data_frame(control_frame)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/websocket/_core.py", line 406, in recv_data_frame
+    frame = self.recv_frame()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/websocket/_core.py", line 445, in recv_frame
+    return self.frame_buffer.recv_frame()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/websocket/_abnf.py", line 341, in recv_frame
+    self.recv_header()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/websocket/_abnf.py", line 297, in recv_header
+    header = self.recv_strict(2)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/websocket/_abnf.py", line 376, in recv_strict
+    bytes_ = self.recv(min(16384, shortage))
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/websocket/_core.py", line 529, in _recv
+    return recv(self.sock, bufsize)
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/websocket/_socket.py", line 111, in recv
+    bytes_ = _recv()
+  File "/data/gu-di/miniconda3/envs/race/lib/python3.8/site-packages/websocket/_socket.py", line 90, in _recv
+    return sock.recv(bufsize)
+KeyboardInterrupt
